@@ -2,4 +2,3 @@
 
 More details to come...
 
-Eric and Mingyuan are here in my office.
