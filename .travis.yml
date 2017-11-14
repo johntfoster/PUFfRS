@@ -1,19 +1,24 @@
 dist: trusty
 sudo: false
 
-language: cpp
+language: generic
 
-cache: ccache
-
-addons:
-  apt:
-      packages: 
-          - lcov
-          - libblas-dev 
-          - liblapack-dev 
-          - libboost-dev 
-          - libyaml-cpp0.5 
-          - libyaml-cpp-dev 
+matrix:
+    include:
+        - os: linux
+          env: COMPILER_NAME=gcc CXX=g++5 CC=gcc-5
+          addons:
+            apt:
+                packages: 
+                    - g++-5
+                    - lcov
+                    - libblas-dev 
+                    - liblapack-dev 
+                    - libboost-dev 
+                    - libyaml-cpp0.5 
+                    - libyaml-cpp-dev 
+                sources:
+                    - ubuntu-toolchain-r-test
 
 install:
     - mkdir build; 
