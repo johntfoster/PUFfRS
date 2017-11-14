@@ -27,7 +27,9 @@ install:
     - cmake -DCMAKE_CXX_COMPILER=${COMPILER} -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME ..;
     - make -j4;
 
-script: ctest
+script: 
+    - ctest
+    - cat Testing/Temporary/LastTest.log
 
 after_success:
   - gem install coveralls-lcov;
