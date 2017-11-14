@@ -6,7 +6,7 @@ language: generic
 matrix:
     include:
         - os: linux
-          env: COMPILER=g++5
+          env: COMPILER=g++-5
           addons:
             apt:
                 packages: 
