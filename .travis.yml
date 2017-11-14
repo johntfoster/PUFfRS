@@ -1,0 +1,29 @@
+dist: trusty
+sudo: false
+
+language: cpp
+
+cache: ccache
+
+addons:
+  apt:
+      packages: 
+          - lcov
+          - libblas-dev 
+          - liblapack-dev 
+          - libboost-dev 
+          - libyaml-cpp0.5 
+          - libyaml-cpp-dev 
+
+install:
+    - mkdir build; 
+    - cd build; 
+    - cmake -DCMAKE_BUILD_TYPE:STRING=Debug ..;
+    - make -j4;
+
+script: ctest
+
+after_success:
+  - gem install coveralls-lcov;
+  - make coverage;
+  - coveralls-lcov coverage.info.cleaned;
