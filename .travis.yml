@@ -6,11 +6,11 @@ language: generic
 matrix:
     include:
         - os: linux
-          env: COMPILER=g++-5
+          env: COMPILER=clang++3.7
           addons:
             apt:
                 packages: 
-                    - g++-5
+                    - clang-3.7
                     - lcov
                     - libblas-dev 
                     - liblapack-dev 
