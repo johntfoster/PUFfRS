@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+#include <Teuchos_Assert.hpp>
 #include "Teuchos_ParameterList.hpp"
 #include "Teuchos_RCP.hpp"
 #include "Teuchos_XMLParameterListHelpers.hpp"
@@ -35,9 +36,13 @@ Teuchos::RCP<Teuchos::ParameterList> puffrs::PuffrsParser::Parse(
     std::ifstream input_file_stream(kInputFile.c_str());
 
     // get results from aprepro's parsing
-    aprepro.parse_stream(input_file_stream,
-                         kInputFile);  // TODO(johntfosterjr@gmail.com): Check
-                                       // return value (bool).
+    const auto return_value =
+        aprepro.parse_stream(input_file_stream, kInputFile);
+
+    // Check for error in return value
+    TEUCHOS_TEST_FOR_EXCEPTION(!return_value,
+                               Teuchos::Exceptions::InvalidParameter,
+                               "**** Aprepro input parsing error.\n");
 
     // Update parameters with data from yaml string
     Teuchos::Ptr<Teuchos::ParameterList> puffrs_parameters_ptr(
