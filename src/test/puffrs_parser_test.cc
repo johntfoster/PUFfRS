@@ -20,6 +20,7 @@
 #include "Teuchos_YamlParser_decl.hpp"
 
 #include "puffrs_parser.h"
+#include "puffrs_types.h"
 
 namespace puffrs_test {
 
@@ -33,7 +34,7 @@ class TestSetup {
 
    private:
     // Get communicator from test runner
-    Teuchos::RCP<const Teuchos::Comm<int>> kComm_ =
+    Teuchos::RCP<const Teuchos::Comm<puffrs::types::PuffrsComm>> kComm_ =
         Tpetra::DefaultPlatform::getDefaultPlatform().getComm();
 
     // Create temporary file
