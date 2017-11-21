@@ -11,8 +11,13 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+#include <algorithm>
+#include <chrono>
+#include <cstdio>
+#include <ctime>
 #include <fstream>
 #include <iostream>
+#include <string>
 
 #include "Teuchos_UnitTestHarness.hpp"
 #include "Tpetra_DefaultPlatform.hpp"
@@ -26,19 +31,43 @@ namespace puffrs_test {
 
 class TestSetup {
    public:
-    TestSetup() {}
+    TestSetup() {
+        CreateTempFileName();
+        temp_file_ = std::fopen(temp_file_name_.c_str(), "w+");
+    }
 
-    ~TestSetup() { fclose(temp_file_); };
+    ~TestSetup() {
+        std::fclose(temp_file_);
+        std::remove(temp_file_name_.c_str());
+    };
 
-    std::string GetFileName() { return std::to_string(fileno(temp_file_)); }
+    std::string GetFileName() { return temp_file_name_; }
 
    private:
+    // Creates a temporary filename based on the system time
+    void CreateTempFileName() {
+        const auto system_time = std::chrono::system_clock::now();
+        const auto date_time =
+            std::chrono::system_clock::to_time_t(system_time);
+        temp_file_name_ = std::ctime(&date_time);
+        // Remove colons
+        temp_file_name_.erase(
+            remove(temp_file_name_.begin(), temp_file_name_.end(), ':'),
+            temp_file_name_.end());
+        // Remove spaces
+        temp_file_name_.erase(
+            remove_if(temp_file_name_.begin(), temp_file_name_.end(),
+                      [](unsigned char x) { return std::isspace(x); }),
+            temp_file_name_.end());
+    }
+
     // Get communicator from test runner
     Teuchos::RCP<const Teuchos::Comm<puffrs::types::PuffrsComm>> kComm_ =
         Tpetra::DefaultPlatform::getDefaultPlatform().getComm();
 
     // Create temporary file
-    std::FILE* temp_file_ = std::tmpfile();
+    std::string temp_file_name_;
+    std::FILE* temp_file_;
 };
 
 // Tests the default value of "Verbose" is correctly set to false

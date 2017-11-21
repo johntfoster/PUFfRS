@@ -31,13 +31,11 @@ Teuchos::RCP<Teuchos::ParameterList> puffrs::PuffrsParser::Parse(
 
     SetPuffrsParameterDefaults(puffrs_parameters.ptr());
 
-    // Create aprepro instance
-    SEAMS::Aprepro aprepro;
-    std::ifstream input_file_stream(kInputFile.c_str());
+    // Create aprepro object
+    SEAMS::Aprepro aprepro_parser;
 
     // get results from aprepro's parsing
-    const auto return_value =
-        aprepro.parse_stream(input_file_stream, kInputFile);
+    const auto return_value = aprepro_parser.parse_file(kInputFile);
 
     // Check for error in return value
     TEUCHOS_TEST_FOR_EXCEPTION(!return_value,
@@ -48,8 +46,12 @@ Teuchos::RCP<Teuchos::ParameterList> puffrs::PuffrsParser::Parse(
     Teuchos::Ptr<Teuchos::ParameterList> puffrs_parameters_ptr(
         puffrs_parameters.get());
 
-    Teuchos::updateParametersFromYamlCString(
-        (aprepro.parsing_results().str()).c_str(), puffrs_parameters_ptr, true);
+    const auto is_empty = aprepro_parser.parsing_results().str().empty();
+
+    if (!is_empty)
+        Teuchos::updateParametersFromYamlString(
+            aprepro_parser.parsing_results().str(), puffrs_parameters_ptr,
+            true);
 
     return puffrs_parameters;
 }
