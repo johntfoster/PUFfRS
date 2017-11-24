@@ -50,13 +50,13 @@ matrix:
                   branch_pattern: coverity_scan
 
 before_install:
-    - eval "${BEFORE_INSTALL_COMMAND}"
+    - ${BEFORE_INSTALL_COMMAND}
 
 install:
-    - eval "${INSTALL_COMMMAND}"
+    - ${INSTALL_COMMMAND}
 
 script: 
-    - eval "${SCRIPT_COMMMAND}"
+    - ${SCRIPT_COMMMAND}
 
 after_success:
-    - eval "${AFTER_SUCCESS_COMMAND}"
+    - ${AFTER_SUCCESS_COMMAND}
