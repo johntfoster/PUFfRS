@@ -53,6 +53,7 @@ before_install:
     - eval "${BEFORE_INSTALL_COMMAND}"
 
 install:
+    - echo ${INSTALL_COMMAND}
     - eval "${INSTALL_COMMMAND}"
 
 script: 
