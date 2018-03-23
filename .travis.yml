@@ -51,11 +51,10 @@ before_install:
     - eval "${BEFORE_INSTALL_COMMAND}"
 
 install:
-    - echo ${INSTALL_COMMAND}
-    - eval "$(INSTALL_COMMMAND)"
+    - eval "${INSTALL_COMMAND}"
 
 script: 
-    - eval "${SCRIPT_COMMMAND}"
+    - eval "${SCRIPT_COMMAND}"
 
 after_success:
     - eval "${AFTER_SUCCESS_COMMAND}"
