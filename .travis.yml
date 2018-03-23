@@ -8,9 +8,7 @@ matrix:
         - if: branch = master
           os: linux 
           env: 
-              - INSTALL_COMMAND="mkdir build; cd build; cmake -DCMAKE_CXX_COMPILER=g++-5 -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME -DCOVERAGE:BOOL=ON ..; make -j4;" |
-                SCRIPT_COMMAND="ctest;" |
-                AFTER_SUCCESS_COMMAND="gem install coveralls-lcov; make coverage; coveralls-lcov coverage.info.cleaned"
+              - INSTALL_COMMAND="mkdir build; cd build; cmake -DCMAKE_CXX_COMPILER=g++-5 -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME -DCOVERAGE:BOOL=ON ..; make -j4;" SCRIPT_COMMAND="ctest;" AFTER_SUCCESS_COMMAND="gem install coveralls-lcov; make coverage; coveralls-lcov coverage.info.cleaned"
           addons: 
               apt: 
                   packages: 
