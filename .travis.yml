@@ -24,7 +24,7 @@ matrix:
         - if: branch = coverity_scan
           os: linux
           env: 
-              - BEFORE_INSTALL_COMMAND="echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | tee -a /etc/ssl/certs/ca- ; git fetch https://github.com/johntfoster/PUFfRS.git master:master ; git rebase master ;"
+              - BEFORE_INSTALL_COMMAND="echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | tee -a /etc/ssl/certs/ca- ; git fetch https://github.com/johntfoster/PUFfRS.git master:master ; git rebase master"
               - secure: "iSgcocrcamc1NEnUan1MmQTps3792XAsMXbBaLpUMEmzGGbo0t66weCBbTqsAG946CcawCqPQhVol2YDNhHToDyypFPg4ppRYXsyaswU48OteqPn4jsUEIiEVMmoy0pCHo4+TxCUP6fARhqMMawASTthkA/dHfDMM48u+lOpMyLgYCHPxQ7XCRJB2m7ofQd04N+IxjtLM6TMIYe6G98e5jZTgq01nxWEn4RmqS87UzQszt4kZRqhU1OSfdF0Ebj3dDL0ybbCU8GRLM9dDcOU2DBI5vqZ9Brk1xUVfg7qQxwNl4L3BDHxtg+jVO/IlGO9kLrz7lAc2MWMQhb7uxUCyAvS15QD3KRYJWIVadzenWKfGFTr/vuQBGY8LBLTJbMDTynv92C1mkEcP5DC/BZPmCWpOEIT1zRgE0U5NKtAEBBRFMMySetH60x9Ma0R7ECRCh+827KTkFKQum9ilabVpTCJF2xd4jAdHHiBLjghrH5WQSwEeqJcbAzBpJGx3PoUVUpE91nhgGF1HGE1r6oLJVbuXQHwTNTT27oqUODcJyxNSZzx8xQWpTwtjh2WMDCzI6ax7kvkClU5MD4Ha/TGmy3XuCa1aeO3mj4IvO/S4J4CQ09T71qPMXJS5MMCVIIJ3BgX500w75CN0ZZMoBl0Bdu4i5JbKdn+GbJn3PyxPTo="
           addons:
               - apt:
@@ -42,9 +42,9 @@ matrix:
                   project:
                       name: "johntfoster/PUFfRS"
                       description: "A Partition-of-Unity Framework for Reservoir Simulation"
-                  notification_email: "john.foster@utexas.edu"
+                  notification_email: "johntfosterjr@gmail.com"
                   build_command_prepend: "mkdir ../../build; cd ../../build; cmake -DCMAKE_CXX_COMPILER=g++-5 -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME .."
-                  build_command:   "make -j4"
+                  build_command: "make -j4"
                   branch_pattern: coverity_scan
 
 before_install:
