@@ -1,60 +1,56 @@
 dist: trusty
-sudo: false
-
+sudo: required
 language: generic
-
+env:
+  global:
+  - secure: "fnbO8844gzbzv94sKy+YAxLbgm6S5M+faE5TaUsAJXP1zDtxxjzAB80ief4A7skXxqUK6ufiC0NQfqlJ72hUTpfY31/ckUt0ptTA+ryeBLGPeQnvQ426951he4XG8wF60Hd27/lvudcrSzbO37T0tfhLYTzoK+sy8XTStSCfiJIzHtT3zoUWJNtKcKSe8ugxSJTDJqpdVVxmq7ZV8XB7IWRrtXWFL4hEEDCl+OME7ghI+9DUSTOQr+WXLN3bYaSPhifBEcr2K8YltNanFvibsCVjR8H4nze4kMcllN66bV95mnTfQfjgSYYMkjaEztKIaANNLRbf+1p0f43tYm1TqZBPuQBfRnpn/4pS6iQy+fhdIxqijU3yZW+cVBS23+c6zRpK2oavbV85hgBOIPhwo5IC2E0BIEhG/slQvqqeXivOaAylYlnlfMG1yXRorTeKtNXx0eXdX+6iicZJAjMBwVTLdMv73Mj+x1UySYmuIxdv5r/T4PdTZf9gvz9lZJjQzv/RXH9SKQzaOm/cInikhK9/CHsmmdyfjrI4tftj1lXdRNKXaFAnUb9gPPqYuiV/fuZwtSq6c//TKR8QTO/mrcYEf/CiVF+jLiN2Z+fb+SJtY2RFm+aTxt109n8O9ytoFiJiLHfxDo8omnC1YfjkicK4rkzk8Jz9rAQml7PY+c0="
 matrix:
-    include: 
-        - if: branch = master
-          os: linux 
-          env: 
-              - INSTALL_COMMAND="mkdir build; cd build; cmake -DCMAKE_CXX_COMPILER=g++-5 -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME -DCOVERAGE:BOOL=ON ..; make -j4" SCRIPT_COMMAND="ctest" AFTER_SUCCESS_COMMAND="gem install coveralls-lcov; make coverage; coveralls-lcov coverage.info.cleaned"
-          addons: 
-              apt: 
-                  packages: 
-                      - g++-5
-                      - lcov
-                      - libblas-dev 
-                      - liblapack-dev 
-                      - libboost-dev 
-                      - libyaml-cpp0.5 
-                      - libyaml-cpp-dev 
-                  sources:
-                      - ubuntu-toolchain-r-test 
-        - if: branch = coverity_scan
-          os: linux
-          env: 
-              - BEFORE_INSTALL_COMMAND="echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | tee -a /etc/ssl/certs/ca- ; git fetch https://github.com/johntfoster/PUFfRS.git master:master ; git rebase master"
-              - secure: "iSgcocrcamc1NEnUan1MmQTps3792XAsMXbBaLpUMEmzGGbo0t66weCBbTqsAG946CcawCqPQhVol2YDNhHToDyypFPg4ppRYXsyaswU48OteqPn4jsUEIiEVMmoy0pCHo4+TxCUP6fARhqMMawASTthkA/dHfDMM48u+lOpMyLgYCHPxQ7XCRJB2m7ofQd04N+IxjtLM6TMIYe6G98e5jZTgq01nxWEn4RmqS87UzQszt4kZRqhU1OSfdF0Ebj3dDL0ybbCU8GRLM9dDcOU2DBI5vqZ9Brk1xUVfg7qQxwNl4L3BDHxtg+jVO/IlGO9kLrz7lAc2MWMQhb7uxUCyAvS15QD3KRYJWIVadzenWKfGFTr/vuQBGY8LBLTJbMDTynv92C1mkEcP5DC/BZPmCWpOEIT1zRgE0U5NKtAEBBRFMMySetH60x9Ma0R7ECRCh+827KTkFKQum9ilabVpTCJF2xd4jAdHHiBLjghrH5WQSwEeqJcbAzBpJGx3PoUVUpE91nhgGF1HGE1r6oLJVbuXQHwTNTT27oqUODcJyxNSZzx8xQWpTwtjh2WMDCzI6ax7kvkClU5MD4Ha/TGmy3XuCa1aeO3mj4IvO/S4J4CQ09T71qPMXJS5MMCVIIJ3BgX500w75CN0ZZMoBl0Bdu4i5JbKdn+GbJn3PyxPTo="
-          addons:
-              - apt:
-                  packages: 
-                      - g++-5
-                      - lcov
-                      - libblas-dev 
-                      - liblapack-dev 
-                      - libboost-dev 
-                      - libyaml-cpp0.5 
-                      - libyaml-cpp-dev 
-                  sources:
-                      - ubuntu-toolchain-r-test
-              - coverity_scan:
-                  project:
-                      name: "johntfoster/PUFfRS"
-                      description: "A Partition-of-Unity Framework for Reservoir Simulation"
-                  notification_email: "johntfosterjr@gmail.com"
-                  build_command_prepend: "mkdir ../../build; cd ../../build; cmake -DCMAKE_CXX_COMPILER=g++-5 -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME .."
-                  build_command: "make -j4"
-                  branch_pattern: coverity_scan
-
+  include:
+  - if: branch = master
+    os: linux
+    env:
+    - INSTALL_COMMAND="mkdir build; cd build; cmake -DCMAKE_CXX_COMPILER=g++-5 -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME -DCOVERAGE:BOOL=ON ..; make -j4" SCRIPT_COMMAND="ctest" AFTER_SUCCESS_COMMAND="gem install coveralls-lcov; make coverage; coveralls-lcov coverage.info.cleaned"
+    addons:
+      apt:
+        packages:
+        - g++-5
+        - lcov
+        - libblas-dev
+        - liblapack-dev
+        - libboost-dev
+        - libyaml-cpp0.5
+        - libyaml-cpp-dev
+        sources:
+        - ubuntu-toolchain-r-test
+  - if: branch = coverity_scan
+    os: linux
+    env:
+    - BEFORE_INSTALL_COMMAND="echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca- ; git fetch https://github.com/johntfoster/TaDIgA.git master:master ; git rebase master"
+    addons:
+    - apt:
+        packages:
+        - g++-5
+        - lcov
+        - libblas-dev
+        - liblapack-dev
+        - libboost-dev
+        - libyaml-cpp0.5
+        - libyaml-cpp-dev
+        sources:
+        - ubuntu-toolchain-r-test
+    - coverity_scan:
+        project:
+          name: "johntfoster/PUFfRS"
+          description: "A Partition-of-Unity Framework for Reservoir Simulation"
+        notification_email: jfoster@austin.utexas.edu
+        build_command_prepend: "mkdir ../../build; cd ../../build; cmake -DCMAKE_CXX_COMPILER=g++-5 -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME .."
+        build_command: "make -j4"
+        branch_pattern: coverity_scan
 before_install:
-    - eval "${BEFORE_INSTALL_COMMAND}"
-
+- eval "${BEFORE_INSTALL_COMMAND}"
 install:
-    - eval "${INSTALL_COMMAND}"
-
-script: 
-    - eval "${SCRIPT_COMMAND}"
-
+- eval "${INSTALL_COMMAND}"
+script:
+- eval "${SCRIPT_COMMAND}"
 after_success:
-    - eval "${AFTER_SUCCESS_COMMAND}"
+- eval "${AFTER_SUCCESS_COMMAND}"
