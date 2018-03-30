@@ -3,54 +3,52 @@ sudo: required
 language: generic
 env:
   global:
-  - secure: "fnbO8844gzbzv94sKy+YAxLbgm6S5M+faE5TaUsAJXP1zDtxxjzAB80ief4A7skXxqUK6ufiC0NQfqlJ72hUTpfY31/ckUt0ptTA+ryeBLGPeQnvQ426951he4XG8wF60Hd27/lvudcrSzbO37T0tfhLYTzoK+sy8XTStSCfiJIzHtT3zoUWJNtKcKSe8ugxSJTDJqpdVVxmq7ZV8XB7IWRrtXWFL4hEEDCl+OME7ghI+9DUSTOQr+WXLN3bYaSPhifBEcr2K8YltNanFvibsCVjR8H4nze4kMcllN66bV95mnTfQfjgSYYMkjaEztKIaANNLRbf+1p0f43tYm1TqZBPuQBfRnpn/4pS6iQy+fhdIxqijU3yZW+cVBS23+c6zRpK2oavbV85hgBOIPhwo5IC2E0BIEhG/slQvqqeXivOaAylYlnlfMG1yXRorTeKtNXx0eXdX+6iicZJAjMBwVTLdMv73Mj+x1UySYmuIxdv5r/T4PdTZf9gvz9lZJjQzv/RXH9SKQzaOm/cInikhK9/CHsmmdyfjrI4tftj1lXdRNKXaFAnUb9gPPqYuiV/fuZwtSq6c//TKR8QTO/mrcYEf/CiVF+jLiN2Z+fb+SJtY2RFm+aTxt109n8O9ytoFiJiLHfxDo8omnC1YfjkicK4rkzk8Jz9rAQml7PY+c0="
+  - secure: "JGjIWN90hmoBKfYALsnFYVOtvkSkJ9yLUJaXTuN1HI24UOCTxw+dVg6FCneIu/P2f1UYXj7S7+9Zz5mqaZKDqa71G8oehoKj99OfQ7jog2sD532uxn7Ek5GqqjnVl/ELGukMiEZJOWQoReUAanp/8j4H4am3JcpnXTN4GnZduAhC+ZsgUjuxA87f+B0B2RvgCLsup2KjIu//Wzyvwqa6Bh7tGmkT7EEKK5Sdhg6a5CBkODxDZfZK+FdMO4B3cr260y/d6jhGjuLwNsZfZ4h3sCJHdk4FrpB1mjicoDyVdgqR1i4wRoRzUsxuKy1fmSyheL4gUp4yTKq4SW9pAkPiC4LKOKvDLjdag0o8D2Mirv+KLLFvDv1J/Fh95m+Z9QY3TiQ6riWzh/jJV5Wwrh5ukuhhSk05RVZADhC+BHV0ZPgdSHmS0oaX/usqfigMvTrmKkos5IPR03TX1toHUs8j1MwZPmxpUQz3fBScdnvLS1EH4/qUPcOQLuC+4tEFAMszlsSnW2AqI5iGIdU0AgkCbkbWs6o9WABlea3OpF0DaoDLzjmNvJ/lmFAUJBGntR9hIPBrjTcBb7iQN0EC5/CccbppRxHzazuPhmTKM16Mx4lT29pLQMYFeUhMG8et7VgQkD8hqdSHtXqGh0BhQN3eRblu57iyq87O85dBH3UE0B8="
+
+addons:
+  coverity_scan:
+    project:
+      name: "johntfoster/PUFfRS"
+      description: "A Partition-of-Unity Framework for Reservoir Simulation"
+    notification_email: jfoster@austin.utexas.edu
+    build_command_prepend: "mkdir build; cd build; cmake -DCMAKE_CXX_COMPILER=g++-5 -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME .."
+    build_command: "make -j4"
+    branch_pattern: coverity_scan
+
 matrix:
   include:
   - if: branch = master
     os: linux
-    env:
-    - INSTALL_COMMAND="mkdir build; cd build; cmake -DCMAKE_CXX_COMPILER=g++-5 -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME -DCOVERAGE:BOOL=ON ..; make -j4" SCRIPT_COMMAND="ctest" AFTER_SUCCESS_COMMAND="gem install coveralls-lcov; make coverage; coveralls-lcov coverage.info.cleaned"
-    addons:
-      apt:
-        packages:
-        - g++-5
-        - lcov
-        - libblas-dev
-        - liblapack-dev
-        - libboost-dev
-        - libyaml-cpp0.5
-        - libyaml-cpp-dev
-        sources:
-        - ubuntu-toolchain-r-test
+    before_script: 
+      - sudo apt-get -qq update
+      - sudo add-apt-repository ppa:ubuntu-toolchain-r-test
+      - sudo apt-get install -y g++-5
+      - sudo apt-get install -y lcov
+      - sudo apt-get install -y libblas-dev
+      - sudo apt-get install -y liblapack-dev
+      - sudo apt-get install -y libboost-dev
+      - sudo apt-get install -y libyaml-cpp0.5
+      - sudo apt-get install -y libyaml-cpp-dev
+      - mkdir build
+      - cd build
+      - cmake -DCMAKE_CXX_COMPILER=g++-5 -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME -DCOVERAGE:BOOL=ON .. 
+      - make -j4 
+    script: ctest 
+    after_success: 
+      - gem install coveralls-lcov
+      - make coverage
+      - coveralls-lcov coverage.info.cleaned
+
   - if: branch = coverity_scan
     os: linux
-    env:
-    - BEFORE_INSTALL_COMMAND="echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca- ; git fetch https://github.com/johntfoster/TaDIgA.git master:master ; git rebase master"
-    addons:
-    - apt:
-        packages:
-        - g++-5
-        - lcov
-        - libblas-dev
-        - liblapack-dev
-        - libboost-dev
-        - libyaml-cpp0.5
-        - libyaml-cpp-dev
-        sources:
-        - ubuntu-toolchain-r-test
-    - coverity_scan:
-        project:
-          name: "johntfoster/PUFfRS"
-          description: "A Partition-of-Unity Framework for Reservoir Simulation"
-        notification_email: jfoster@austin.utexas.edu
-        build_command_prepend: "mkdir ../../build; cd ../../build; cmake -DCMAKE_CXX_COMPILER=g++-5 -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME .."
-        build_command: "make -j4"
-        branch_pattern: coverity_scan
-before_install:
-- eval "${BEFORE_INSTALL_COMMAND}"
-install:
-- eval "${INSTALL_COMMAND}"
-script:
-- eval "${SCRIPT_COMMAND}"
-after_success:
-- eval "${AFTER_SUCCESS_COMMAND}"
+    before_script:
+      - sudo apt-get -qq update
+      - sudo add-apt-repository ppa:ubuntu-toolchain-r-test
+      - sudo apt-get install -y g++-5
+      - sudo apt-get install -y lcov
+      - sudo apt-get install -y libblas-dev
+      - sudo apt-get install -y liblapack-dev
+      - sudo apt-get install -y libboost-dev
+      - sudo apt-get install -y libyaml-cpp0.5
+      - sudo apt-get install -y libyaml-cpp-dev
+    before_install: echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
