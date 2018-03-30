@@ -15,40 +15,14 @@ addons:
     build_command: "make -j4"
     branch_pattern: coverity_scan
 
-matrix:
-  include:
-  - if: branch = master
-    os: linux
-    before_script: 
-      - sudo apt-get -qq update
-      - sudo add-apt-repository ppa:ubuntu-toolchain-r-test
-      - sudo apt-get install -y g++-5
-      - sudo apt-get install -y lcov
-      - sudo apt-get install -y libblas-dev
-      - sudo apt-get install -y liblapack-dev
-      - sudo apt-get install -y libboost-dev
-      - sudo apt-get install -y libyaml-cpp0.5
-      - sudo apt-get install -y libyaml-cpp-dev
-      - mkdir build
-      - cd build
-      - cmake -DCMAKE_CXX_COMPILER=g++-5 -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME -DCOVERAGE:BOOL=ON .. 
-      - make -j4 
-    script: ctest 
-    after_success: 
-      - gem install coveralls-lcov
-      - make coverage
-      - coveralls-lcov coverage.info.cleaned
-
-  - if: branch = coverity_scan
-    os: linux
-    before_script:
-      - sudo apt-get -qq update
-      - sudo add-apt-repository ppa:ubuntu-toolchain-r-test
-      - sudo apt-get install -y g++-5
-      - sudo apt-get install -y lcov
-      - sudo apt-get install -y libblas-dev
-      - sudo apt-get install -y liblapack-dev
-      - sudo apt-get install -y libboost-dev
-      - sudo apt-get install -y libyaml-cpp0.5
-      - sudo apt-get install -y libyaml-cpp-dev
-    before_install: echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
+before_install: 
+  - echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
+  - sudo apt-get -qq update
+  - sudo add-apt-repository ppa:ubuntu-toolchain-r-test
+  - sudo apt-get install -y g++-5
+  - sudo apt-get install -y lcov
+  - sudo apt-get install -y libblas-dev
+  - sudo apt-get install -y liblapack-dev
+  - sudo apt-get install -y libboost-dev
+  - sudo apt-get install -y libyaml-cpp0.5
+  - sudo apt-get install -y libyaml-cpp-dev
