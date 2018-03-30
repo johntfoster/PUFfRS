@@ -11,7 +11,7 @@ addons:
       name: "johntfoster/PUFfRS"
       description: "A Partition-of-Unity Framework for Reservoir Simulation"
     notification_email: jfoster@austin.utexas.edu
-    build_command_prepend: "mkdir build; cd build; cmake -DCMAKE_CXX_COMPILER=g++-5 -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME .."
+    build_command_prepend: "cov-configure --comptype gcc --compiler gcc-5 --template; autoreconf -i; mkdir build; cd build; cmake -DCMAKE_CXX_COMPILER=g++-5 -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME .."
     build_command: "make -j4"
     branch_pattern: coverity_scan
   apt:
