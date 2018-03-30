@@ -41,7 +41,6 @@ matrix:
 
   - if: branch = coverity_scan
     os: linux
-    before_install: echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
     before_script:
       - sudo apt-get -qq update
       - sudo add-apt-repository ppa:ubuntu-toolchain-r-test
@@ -52,3 +51,4 @@ matrix:
       - sudo apt-get install -y libboost-dev
       - sudo apt-get install -y libyaml-cpp0.5
       - sudo apt-get install -y libyaml-cpp-dev
+    before_install: echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
