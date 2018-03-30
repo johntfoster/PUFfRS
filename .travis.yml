@@ -30,19 +30,17 @@ matrix:
   include:
   - if: branch = master
     os: linux
-    env:
-    - INSTALL_COMMAND="mkdir build; cd build; cmake -DCMAKE_CXX_COMPILER=g++-5 -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME -DCOVERAGE:BOOL=ON ..; make -j4" SCRIPT_COMMAND="ctest" AFTER_SUCCESS_COMMAND="gem install coveralls-lcov; make coverage; coveralls-lcov coverage.info.cleaned"
+    before_install: 
+      - mkdir build
+      - cd build
+      - cmake -DCMAKE_CXX_COMPILER=g++-5 -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME -DCOVERAGE:BOOL=ON .. 
+      - make -j4 
+    script: ctest 
+    after_success: 
+      - gem install coveralls-lcov
+      - make coverage
+      - coveralls-lcov coverage.info.cleaned
+
   - if: branch = coverity_scan
     os: linux
-    env:
-    - BEFORE_INSTALL_COMMAND="echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-"
-
-before_install:
-- eval "${BEFORE_INSTALL_COMMAND}"
-install:
-- eval "${INSTALL_COMMAND}"
-script:
-- eval "${SCRIPT_COMMAND}"
-after_success:
-- eval "${AFTER_SUCCESS_COMMAND}"
-
+    before_install: echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
