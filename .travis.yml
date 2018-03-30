@@ -1,5 +1,5 @@
 dist: trusty
-sudo: true
+sudo: false
 language: generic
 env:
   global:
@@ -26,21 +26,4 @@ addons:
         sources:
         - ubuntu-toolchain-r-test
 
-matrix:
-  include:
-  - if: branch = master
-    os: linux
-    before_install: 
-      - mkdir build
-      - cd build
-      - cmake -DCMAKE_CXX_COMPILER=g++-5 -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME -DCOVERAGE:BOOL=ON .. 
-      - make -j4 
-    script: ctest 
-    after_success: 
-      - gem install coveralls-lcov
-      - make coverage
-      - coveralls-lcov coverage.info.cleaned
-
-  - if: branch = coverity_scan
-    os: linux
-    before_install: echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
+before_install: echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
