@@ -1,3 +1,4 @@
+import sys
 import subprocess
 sys.path.append( "/home/nelson/Downloads/App/PUFfRs/ext/breathe/" )
 subprocess.call('cd .. ; doxygen', shell=True)
