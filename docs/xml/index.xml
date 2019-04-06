@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="classpuffrs_1_1Discretization" kind="class"><name>puffrs::Discretization</name>
+    <member refid="classpuffrs_1_1Discretization_1a4da185868d21559de4d7a595d9a90bcf" kind="function"><name>Discretization</name></member>
+    <member refid="classpuffrs_1_1Discretization_1ad865495300b727357696bdfb3ad9af0f" kind="function"><name>~Discretization</name></member>
+    <member refid="classpuffrs_1_1Discretization_1a97492e0aeb53130741943a528be8bb42" kind="function"><name>Discretization</name></member>
+    <member refid="classpuffrs_1_1Discretization_1aba9bf5f82ff8661e3f6c41647e9a1b8d" kind="function"><name>operator=</name></member>
+    <member refid="classpuffrs_1_1Discretization_1ac349695d441491e509fb7cb772ae9891" kind="function"><name>initialize</name></member>
+  </compound>
+  <compound refid="classpuffrs_1_1DiscretizationFactory" kind="class"><name>puffrs::DiscretizationFactory</name>
+    <member refid="classpuffrs_1_1DiscretizationFactory_1a5375e76d7af9c10d52eb374ead8a922c" kind="variable"><name>kDiscretizationParameters_</name></member>
+    <member refid="classpuffrs_1_1DiscretizationFactory_1af6d6e4dfb783d8a85208680f84e50cda" kind="function"><name>DiscretizationFactory</name></member>
+    <member refid="classpuffrs_1_1DiscretizationFactory_1a388d77d1ec8064e31cea45d211e208b0" kind="function"><name>~DiscretizationFactory</name></member>
+    <member refid="classpuffrs_1_1DiscretizationFactory_1a179e7c336204e55c07de5510398b090a" kind="function"><name>Create</name></member>
+    <member refid="classpuffrs_1_1DiscretizationFactory_1a54bcca9f9d8fb1103b02f95f4d95313a" kind="function"><name>DiscretizationFactory</name></member>
+    <member refid="classpuffrs_1_1DiscretizationFactory_1a85641b0ce8c164b6a226ec8148af6c19" kind="function"><name>operator=</name></member>
+  </compound>
+  <compound refid="classpuffrs_1_1Puffrs" kind="class"><name>puffrs::Puffrs</name>
+    <member refid="classpuffrs_1_1Puffrs_1a7461fc917e9ae7e78a2b5c8c851d6999" kind="variable"><name>parameters_</name></member>
+    <member refid="classpuffrs_1_1Puffrs_1abcef5a8b8844d979db872e51b8f89abb" kind="function"><name>Puffrs</name></member>
+    <member refid="classpuffrs_1_1Puffrs_1af2fc58b21503026f090371ebd4d7d8c3" kind="function"><name>~Puffrs</name></member>
+  </compound>
+  <compound refid="classpuffrs_1_1PuffrsFactory" kind="class"><name>puffrs::PuffrsFactory</name>
+    <member refid="classpuffrs_1_1PuffrsFactory_1aafc0e7336244608cf484fba49b9d0b0d" kind="function"><name>PuffrsFactory</name></member>
+    <member refid="classpuffrs_1_1PuffrsFactory_1a3ba650436e01b505bf7903ed5e263a2a" kind="function"><name>~PuffrsFactory</name></member>
+    <member refid="classpuffrs_1_1PuffrsFactory_1a1b0f9bebc29e95a6e02a0a10d33d378c" kind="function"><name>Create</name></member>
+    <member refid="classpuffrs_1_1PuffrsFactory_1aaa29b92655e69498acaac735b673b409" kind="function"><name>Create</name></member>
+    <member refid="classpuffrs_1_1PuffrsFactory_1ad33d26fbd9c0312c7f446d2ac0524a46" kind="function"><name>PuffrsFactory</name></member>
+    <member refid="classpuffrs_1_1PuffrsFactory_1a19f3d1fa3725b73b0ab114da3626f1b7" kind="function"><name>operator=</name></member>
+  </compound>
+  <compound refid="classpuffrs_1_1PuffrsParser" kind="class"><name>puffrs::PuffrsParser</name>
+    <member refid="classpuffrs_1_1PuffrsParser_1a9da626765cb93b777204495b4b7a077a" kind="function"><name>PuffrsParser</name></member>
+    <member refid="classpuffrs_1_1PuffrsParser_1aa41312817bfa20dc93e80790f51a720b" kind="function"><name>Parse</name></member>
+    <member refid="classpuffrs_1_1PuffrsParser_1afcea28088372ba57ea9baab86b1a22c3" kind="function"><name>SetPuffrsParameterDefaults</name></member>
+    <member refid="classpuffrs_1_1PuffrsParser_1a29322105db5a166f5a778f9c01146290" kind="function"><name>PuffrsParser</name></member>
+    <member refid="classpuffrs_1_1PuffrsParser_1a7db2d31b496a8cc95e412f48f58f288a" kind="function"><name>operator=</name></member>
+  </compound>
+  <compound refid="classpuffrs_1_1RegularDiscretization" kind="class"><name>puffrs::RegularDiscretization</name>
+    <member refid="classpuffrs_1_1RegularDiscretization_1a5306dd2eda5b9c75850e889e6b0a2b54" kind="variable"><name>kComm_</name></member>
+    <member refid="classpuffrs_1_1RegularDiscretization_1adb66672889168f2829fd7d8b1cc5faee" kind="function"><name>RegularDiscretization</name></member>
+    <member refid="classpuffrs_1_1RegularDiscretization_1a246a4ab0d1388baf3a5f5d931745ac7b" kind="function"><name>~RegularDiscretization</name></member>
+    <member refid="classpuffrs_1_1RegularDiscretization_1aa9c47d9034810efb28b23ce9e3c35e12" kind="function"><name>RegularDiscretization</name></member>
+    <member refid="classpuffrs_1_1RegularDiscretization_1a9af65493cb51df0a8e9b82ca46b9a897" kind="function"><name>operator=</name></member>
+  </compound>
+  <compound refid="namespacepuffrs" kind="namespace"><name>puffrs</name>
+  </compound>
+  <compound refid="namespacepuffrs_1_1types" kind="namespace"><name>puffrs::types</name>
+    <member refid="puffrs__types_8h_1a72011cde8eb399d85419fc4e50cf2a3c" kind="typedef"><name>PuffrsInt</name></member>
+    <member refid="puffrs__types_8h_1ae6e1c2f13f9b707f3417c3c189e6e6b4" kind="typedef"><name>PuffrsUnsignedInt</name></member>
+    <member refid="puffrs__types_8h_1a8d437b7eff42642cb262479f7d38d107" kind="typedef"><name>PuffrsReal</name></member>
+    <member refid="puffrs__types_8h_1a50f0de31b2b3d4c46e30fddf94cf14f2" kind="typedef"><name>PuffrsComm</name></member>
+    <member refid="puffrs__types_8h_1a6514c7d21f83c3e40f229daf87cfac83" kind="typedef"><name>PuffrsVector</name></member>
+    <member refid="puffrs__types_8h_1a154a1a4d7f2e3d1a10aee1129063af63" kind="typedef"><name>PuffrsArray</name></member>
+    <member refid="puffrs__types_8h_1ad81382d38006403ca5a8d7957e957465" kind="typedef"><name>PuffrsIntArray</name></member>
+    <member refid="puffrs__types_8h_1a5468d9f6020d514507ec606c156934f5" kind="typedef"><name>PuffrsRealArray</name></member>
+    <member refid="puffrs__types_8h_1a01c9a7e5928de2ea31cafac69ca8c666" kind="typedef"><name>PuffrsIntVector</name></member>
+    <member refid="puffrs__types_8h_1a55b365b7ba899c73fbb263c5f1608830" kind="typedef"><name>PuffrsRealVector</name></member>
+  </compound>
+  <compound refid="puffrs_8cc" kind="file"><name>puffrs.cc</name>
+  </compound>
+  <compound refid="puffrs_8h" kind="file"><name>puffrs.h</name>
+  </compound>
+  <compound refid="puffrs__discretization_8cc" kind="file"><name>puffrs_discretization.cc</name>
+  </compound>
+  <compound refid="puffrs__discretization_8h" kind="file"><name>puffrs_discretization.h</name>
+  </compound>
+  <compound refid="puffrs__discretization__factory_8cc" kind="file"><name>puffrs_discretization_factory.cc</name>
+  </compound>
+  <compound refid="puffrs__discretization__factory_8h" kind="file"><name>puffrs_discretization_factory.h</name>
+  </compound>
+  <compound refid="puffrs__factory_8cc" kind="file"><name>puffrs_factory.cc</name>
+  </compound>
+  <compound refid="puffrs__factory_8h" kind="file"><name>puffrs_factory.h</name>
+  </compound>
+  <compound refid="puffrs__main_8cc" kind="file"><name>puffrs_main.cc</name>
+    <member refid="puffrs__main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="puffrs__parser_8cc" kind="file"><name>puffrs_parser.cc</name>
+  </compound>
+  <compound refid="puffrs__parser_8h" kind="file"><name>puffrs_parser.h</name>
+  </compound>
+  <compound refid="puffrs__regular__discretization_8cc" kind="file"><name>puffrs_regular_discretization.cc</name>
+  </compound>
+  <compound refid="puffrs__regular__discretization_8h" kind="file"><name>puffrs_regular_discretization.h</name>
+  </compound>
+  <compound refid="puffrs__types_8h" kind="file"><name>puffrs_types.h</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>
