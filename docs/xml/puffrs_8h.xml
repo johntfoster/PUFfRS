@@ -8,27 +8,6 @@
     <includedby refid="puffrs_8cc" local="yes">src/puffrs.cc</includedby>
     <includedby refid="puffrs__factory_8h" local="yes">src/puffrs_factory.h</includedby>
     <incdepgraph>
-      <node id="16">
-        <label>puffrs_types.h</label>
-        <link refid="puffrs__types_8h_source"/>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-      </node>
-      <node id="13">
-        <label>Teuchos_ParameterList.hpp</label>
-      </node>
-      <node id="11">
-        <label>src/puffrs.h</label>
-        <link refid="puffrs_8h"/>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-      </node>
       <node id="14">
         <label>puffrs_discretization.h</label>
         <link refid="puffrs__discretization_8h_source"/>
@@ -41,6 +20,17 @@
         <childnode refid="16" relation="include">
         </childnode>
       </node>
+      <node id="13">
+        <label>Teuchos_ParameterList.hpp</label>
+      </node>
+      <node id="16">
+        <label>puffrs_types.h</label>
+        <link refid="puffrs__types_8h_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
       <node id="15">
         <label>vector</label>
       </node>
@@ -49,6 +39,16 @@
       </node>
       <node id="12">
         <label>Teuchos_Comm.hpp</label>
+      </node>
+      <node id="11">
+        <label>src/puffrs.h</label>
+        <link refid="puffrs_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>

@@ -13,17 +13,6 @@
     <includedby refid="puffrs__factory_8h" local="yes">src/puffrs_factory.h</includedby>
     <includedby refid="puffrs__regular__discretization_8cc" local="yes">src/puffrs_regular_discretization.cc</includedby>
     <incdepgraph>
-      <node id="33">
-        <label>puffrs_types.h</label>
-        <link refid="puffrs__types_8h_source"/>
-        <childnode refid="34" relation="include">
-        </childnode>
-        <childnode refid="30" relation="include">
-        </childnode>
-      </node>
-      <node id="32">
-        <label>Teuchos_ParameterList.hpp</label>
-      </node>
       <node id="29">
         <label>src/puffrs_discretization.h</label>
         <link refid="puffrs__discretization_8h"/>
@@ -34,6 +23,17 @@
         <childnode refid="32" relation="include">
         </childnode>
         <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>Teuchos_ParameterList.hpp</label>
+      </node>
+      <node id="33">
+        <label>puffrs_types.h</label>
+        <link refid="puffrs__types_8h_source"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
         </childnode>
       </node>
       <node id="30">
@@ -47,24 +47,6 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="37">
-        <label>src/puffrs_factory.h</label>
-        <link refid="puffrs__factory_8h_source"/>
-      </node>
-      <node id="38">
-        <label>src/puffrs_discretization_factory.h</label>
-        <link refid="puffrs__discretization__factory_8h_source"/>
-      </node>
-      <node id="36">
-        <label>src/puffrs.h</label>
-        <link refid="puffrs_8h_source"/>
-        <childnode refid="37" relation="include">
-        </childnode>
-      </node>
-      <node id="39">
-        <label>src/puffrs_regular_discretization.h</label>
-        <link refid="puffrs__regular__discretization_8h_source"/>
-      </node>
       <node id="35">
         <label>src/puffrs_discretization.h</label>
         <link refid="puffrs__discretization_8h"/>
@@ -74,6 +56,24 @@
         </childnode>
         <childnode refid="39" relation="include">
         </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>src/puffrs_factory.h</label>
+        <link refid="puffrs__factory_8h_source"/>
+      </node>
+      <node id="38">
+        <label>src/puffrs_discretization_factory.h</label>
+        <link refid="puffrs__discretization__factory_8h_source"/>
+      </node>
+      <node id="39">
+        <label>src/puffrs_regular_discretization.h</label>
+        <link refid="puffrs__regular__discretization_8h_source"/>
+      </node>
+      <node id="36">
+        <label>src/puffrs.h</label>
+        <link refid="puffrs_8h_source"/>
         <childnode refid="37" relation="include">
         </childnode>
       </node>

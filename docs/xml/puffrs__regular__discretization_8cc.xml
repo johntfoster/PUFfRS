@@ -6,53 +6,53 @@
     <includes refid="puffrs__discretization_8h" local="yes">puffrs_discretization.h</includes>
     <incdepgraph>
       <node id="118">
-        <label>puffrs_types.h</label>
-        <link refid="puffrs__types_8h_source"/>
-        <childnode refid="119" relation="include">
-        </childnode>
-        <childnode refid="117" relation="include">
-        </childnode>
-      </node>
-      <node id="115">
-        <label>Teuchos_ParameterList.hpp</label>
-      </node>
-      <node id="116">
         <label>puffrs_discretization.h</label>
         <link refid="puffrs__discretization_8h_source"/>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
         <childnode refid="117" relation="include">
         </childnode>
-        <childnode refid="114" relation="include">
+        <childnode refid="120" relation="include">
         </childnode>
+      </node>
+      <node id="117">
+        <label>Teuchos_ParameterList.hpp</label>
+      </node>
+      <node id="114">
+        <label>src/puffrs_regular_discretization.cc</label>
+        <link refid="puffrs__regular__discretization_8cc"/>
         <childnode refid="115" relation="include">
         </childnode>
         <childnode refid="118" relation="include">
         </childnode>
       </node>
-      <node id="113">
+      <node id="115">
         <label>puffrs_regular_discretization.h</label>
         <link refid="puffrs__regular__discretization_8h_source"/>
-        <childnode refid="114" relation="include">
-        </childnode>
-        <childnode refid="115" relation="include">
-        </childnode>
         <childnode refid="116" relation="include">
         </childnode>
-      </node>
-      <node id="117">
-        <label>vector</label>
-      </node>
-      <node id="112">
-        <label>src/puffrs_regular_discretization.cc</label>
-        <link refid="puffrs__regular__discretization_8cc"/>
-        <childnode refid="113" relation="include">
+        <childnode refid="117" relation="include">
         </childnode>
-        <childnode refid="116" relation="include">
+        <childnode refid="118" relation="include">
+        </childnode>
+      </node>
+      <node id="120">
+        <label>puffrs_types.h</label>
+        <link refid="puffrs__types_8h_source"/>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
         </childnode>
       </node>
       <node id="119">
+        <label>vector</label>
+      </node>
+      <node id="121">
         <label>array</label>
       </node>
-      <node id="114">
+      <node id="116">
         <label>Teuchos_Comm.hpp</label>
       </node>
     </incdepgraph>

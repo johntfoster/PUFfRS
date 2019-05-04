@@ -25,6 +25,9 @@
 
 // Input file parser
 Teuchos::RCP<Teuchos::ParameterList> puffrs::PuffrsParser::Parse(
+		/*!
+		* ... File Parser ...
+		*/
     const std::string kInputFile) {
     // Set application parameters to default values
     auto puffrs_parameters = Teuchos::rcp(new Teuchos::ParameterList());

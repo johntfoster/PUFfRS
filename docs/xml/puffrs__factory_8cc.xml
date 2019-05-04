@@ -5,16 +5,28 @@
     <includes refid="puffrs__factory_8h" local="yes">puffrs_factory.h</includes>
     <includes refid="puffrs__parser_8h" local="yes">puffrs_parser.h</includes>
     <incdepgraph>
-      <node id="69">
-        <label>puffrs_types.h</label>
-        <link refid="puffrs__types_8h_source"/>
-        <childnode refid="70" relation="include">
-        </childnode>
+      <node id="67">
+        <label>puffrs_discretization.h</label>
+        <link refid="puffrs__discretization_8h_source"/>
         <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
         </childnode>
       </node>
       <node id="63">
         <label>Teuchos_ParameterList.hpp</label>
+      </node>
+      <node id="61">
+        <label>src/puffrs_factory.cc</label>
+        <link refid="puffrs__factory_8cc"/>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
       </node>
       <node id="62">
         <label>puffrs_factory.h</label>
@@ -30,34 +42,12 @@
         <childnode refid="69" relation="include">
         </childnode>
       </node>
-      <node id="65">
-        <label>puffrs.h</label>
-        <link refid="puffrs_8h_source"/>
-        <childnode refid="66" relation="include">
+      <node id="69">
+        <label>puffrs_types.h</label>
+        <link refid="puffrs__types_8h_source"/>
+        <childnode refid="70" relation="include">
         </childnode>
-        <childnode refid="63" relation="include">
-        </childnode>
-        <childnode refid="67" relation="include">
-        </childnode>
-      </node>
-      <node id="67">
-        <label>puffrs_discretization.h</label>
-        <link refid="puffrs__discretization_8h_source"/>
         <childnode refid="68" relation="include">
-        </childnode>
-        <childnode refid="66" relation="include">
-        </childnode>
-        <childnode refid="63" relation="include">
-        </childnode>
-        <childnode refid="69" relation="include">
-        </childnode>
-      </node>
-      <node id="61">
-        <label>src/puffrs_factory.cc</label>
-        <link refid="puffrs__factory_8cc"/>
-        <childnode refid="62" relation="include">
-        </childnode>
-        <childnode refid="71" relation="include">
         </childnode>
       </node>
       <node id="68">
@@ -69,6 +59,19 @@
       <node id="70">
         <label>array</label>
       </node>
+      <node id="66">
+        <label>Teuchos_Comm.hpp</label>
+      </node>
+      <node id="65">
+        <label>puffrs.h</label>
+        <link refid="puffrs_8h_source"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
       <node id="71">
         <label>puffrs_parser.h</label>
         <link refid="puffrs__parser_8h_source"/>
@@ -76,9 +79,6 @@
         </childnode>
         <childnode refid="64" relation="include">
         </childnode>
-      </node>
-      <node id="66">
-        <label>Teuchos_Comm.hpp</label>
       </node>
     </incdepgraph>
     <briefdescription>
@@ -107,7 +107,7 @@
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>kInputFile,</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Teuchos::RCP&lt;</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Teuchos::Comm&lt;puffrs::types::PuffrsComm&gt;<sp/>&gt;&amp;<sp/>kComm,</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>Teuchos::RCP&lt;puffrs::Discretization&gt;<sp/>puffrs_discretization)<sp/>{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>kPuffrsParameters<sp/>=<sp/>puffrs::PuffrsParser::Parse(kInputFile);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>kPuffrsParameters<sp/>=<sp/><ref refid="classpuffrs_1_1PuffrsParser_1aa41312817bfa20dc93e80790f51a720b" kindref="member">puffrs::PuffrsParser::Parse</ref>(kInputFile);</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>new<sp/>puffrs<sp/>object</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Teuchos::rcp(</highlight></codeline>

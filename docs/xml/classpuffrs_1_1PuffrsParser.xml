@@ -26,6 +26,7 @@
         <param>
           <type>const std::string</type>
           <declname>kInputFile</declname>
+          <briefdescription><para>... File Parser ... </para></briefdescription>
         </param>
         <briefdescription>
         </briefdescription>
@@ -33,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/puffrs_parser.h" line="26" column="1" bodyfile="src/puffrs_parser.cc" bodystart="27" bodyend="57"/>
+        <location file="src/puffrs_parser.h" line="26" column="1" bodyfile="src/puffrs_parser.cc" bodystart="29" bodyend="68"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-func">
@@ -52,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/puffrs_parser.h" line="31" column="1" bodyfile="src/puffrs_parser.cc" bodystart="59" bodyend="62"/>
+        <location file="src/puffrs_parser.h" line="31" column="1" bodyfile="src/puffrs_parser.cc" bodystart="70" bodyend="73"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">

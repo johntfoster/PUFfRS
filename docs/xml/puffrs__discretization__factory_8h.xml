@@ -10,12 +10,16 @@
     <includedby refid="puffrs_8cc" local="yes">src/puffrs.cc</includedby>
     <includedby refid="puffrs__discretization__factory_8cc" local="yes">src/puffrs_discretization_factory.cc</includedby>
     <incdepgraph>
-      <node id="58">
-        <label>puffrs_types.h</label>
-        <link refid="puffrs__types_8h_source"/>
-        <childnode refid="59" relation="include">
-        </childnode>
+      <node id="56">
+        <label>puffrs_discretization.h</label>
+        <link refid="puffrs__discretization_8h_source"/>
         <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
         </childnode>
       </node>
       <node id="54">
@@ -35,16 +39,12 @@
         <childnode refid="58" relation="include">
         </childnode>
       </node>
-      <node id="56">
-        <label>puffrs_discretization.h</label>
-        <link refid="puffrs__discretization_8h_source"/>
+      <node id="58">
+        <label>puffrs_types.h</label>
+        <link refid="puffrs__types_8h_source"/>
+        <childnode refid="59" relation="include">
+        </childnode>
         <childnode refid="57" relation="include">
-        </childnode>
-        <childnode refid="53" relation="include">
-        </childnode>
-        <childnode refid="54" relation="include">
-        </childnode>
-        <childnode refid="58" relation="include">
         </childnode>
       </node>
       <node id="57">

@@ -3,38 +3,75 @@
   <compounddef id="puffrs__main_8cc" kind="file" language="C++">
     <compoundname>puffrs_main.cc</compoundname>
     <includes local="no">iostream</includes>
+    <includes local="no">fstream</includes>
     <includes local="yes">Teuchos_GlobalMPISession.hpp</includes>
     <includes local="yes">Xpetra_DefaultPlatform.hpp</includes>
     <includes refid="puffrs__factory_8h" local="yes">puffrs_factory.h</includes>
     <includes local="yes">puffrs_version.h</includes>
     <incdepgraph>
-      <node id="94">
-        <label>puffrs_types.h</label>
-        <link refid="puffrs__types_8h_source"/>
+      <node id="93">
+        <label>puffrs_discretization.h</label>
+        <link refid="puffrs__discretization_8h_source"/>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
         <childnode refid="95" relation="include">
         </childnode>
-        <childnode refid="93" relation="include">
-        </childnode>
       </node>
-      <node id="88">
+      <node id="89">
         <label>Teuchos_ParameterList.hpp</label>
       </node>
-      <node id="87">
+      <node id="86">
+        <label>Teuchos_GlobalMPISession.hpp</label>
+      </node>
+      <node id="88">
         <label>puffrs_factory.h</label>
         <link refid="puffrs__factory_8h_source"/>
-        <childnode refid="88" relation="include">
-        </childnode>
         <childnode refid="89" relation="include">
         </childnode>
         <childnode refid="90" relation="include">
         </childnode>
-        <childnode refid="92" relation="include">
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>fstream</label>
+      </node>
+      <node id="87">
+        <label>Xpetra_DefaultPlatform.hpp</label>
+      </node>
+      <node id="97">
+        <label>puffrs_version.h</label>
+      </node>
+      <node id="95">
+        <label>puffrs_types.h</label>
+        <link refid="puffrs__types_8h_source"/>
+        <childnode refid="96" relation="include">
         </childnode>
         <childnode refid="94" relation="include">
         </childnode>
       </node>
-      <node id="85">
-        <label>Teuchos_GlobalMPISession.hpp</label>
+      <node id="94">
+        <label>vector</label>
+      </node>
+      <node id="90">
+        <label>Teuchos_RCP.hpp</label>
+      </node>
+      <node id="96">
+        <label>array</label>
+      </node>
+      <node id="84">
+        <label>iostream</label>
+      </node>
+      <node id="92">
+        <label>Teuchos_Comm.hpp</label>
       </node>
       <node id="83">
         <label>src/puffrs_main.cc</label>
@@ -47,53 +84,23 @@
         </childnode>
         <childnode refid="87" relation="include">
         </childnode>
-        <childnode refid="96" relation="include">
-        </childnode>
-      </node>
-      <node id="90">
-        <label>puffrs.h</label>
-        <link refid="puffrs_8h_source"/>
-        <childnode refid="91" relation="include">
-        </childnode>
         <childnode refid="88" relation="include">
         </childnode>
-        <childnode refid="92" relation="include">
+        <childnode refid="97" relation="include">
         </childnode>
-      </node>
-      <node id="92">
-        <label>puffrs_discretization.h</label>
-        <link refid="puffrs__discretization_8h_source"/>
-        <childnode refid="93" relation="include">
-        </childnode>
-        <childnode refid="91" relation="include">
-        </childnode>
-        <childnode refid="88" relation="include">
-        </childnode>
-        <childnode refid="94" relation="include">
-        </childnode>
-      </node>
-      <node id="86">
-        <label>Xpetra_DefaultPlatform.hpp</label>
-      </node>
-      <node id="96">
-        <label>puffrs_version.h</label>
-      </node>
-      <node id="93">
-        <label>vector</label>
-      </node>
-      <node id="89">
-        <label>Teuchos_RCP.hpp</label>
-      </node>
-      <node id="95">
-        <label>array</label>
-      </node>
-      <node id="84">
-        <label>iostream</label>
       </node>
       <node id="91">
-        <label>Teuchos_Comm.hpp</label>
+        <label>puffrs.h</label>
+        <link refid="puffrs_8h_source"/>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
+    <innernamespace refid="namespacestd">std</innernamespace>
       <sectiondef kind="func">
       <memberdef kind="function" id="puffrs__main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -115,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/puffrs_main.cc" line="22" column="1" bodyfile="src/puffrs_main.cc" bodystart="22" bodyend="55"/>
+        <location file="src/puffrs_main.cc" line="24" column="1" bodyfile="src/puffrs_main.cc" bodystart="24" bodyend="59"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -137,47 +144,51 @@
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Teuchos_GlobalMPISession.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Xpetra_DefaultPlatform.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;puffrs_factory.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;puffrs_version.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[])<sp/>{</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>MPI</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>Teuchos::GlobalMPISession<sp/>mpi_session(&amp;argc,<sp/>&amp;argv,<sp/>NULL);</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>kComm<sp/>=<sp/>Xpetra::DefaultPlatform::getDefaultPlatform().getComm();</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>kRank<sp/>=<sp/>kComm-&gt;getRank();</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>kNumberOfProcessors<sp/>=<sp/>kComm-&gt;getSize();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Teuchos_GlobalMPISession.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Xpetra_DefaultPlatform.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;puffrs_factory.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;puffrs_version.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[])<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;In<sp/>main<sp/>function!<sp/>woohoo!\n&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>MPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>Teuchos::GlobalMPISession<sp/>mpi_session(&amp;argc,<sp/>&amp;argv,<sp/>NULL);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>kComm<sp/>=<sp/>Xpetra::DefaultPlatform::getDefaultPlatform().getComm();</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Banner</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(kRank<sp/>==<sp/>0)<sp/>{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n--<sp/>puffrs<sp/>v<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>Puffrs_GIT_COMMIT_HASH<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(kNumberOfProcessors<sp/>&gt;<sp/>1)</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;MPI<sp/>initialized<sp/>on<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>kNumberOfProcessors</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>processors.\n&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc<sp/>!=<sp/>2)<sp/>{</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(kRank<sp/>==<sp/>0)</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Usage:<sp/><sp/>puffrs<sp/>&lt;input.yml&gt;\n&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>filename<sp/>string<sp/>from<sp/>command<sp/>line</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>kYamlFileName(argv[1]);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>kRank<sp/>=<sp/>kComm-&gt;getRank();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>kNumberOfProcessors<sp/>=<sp/>kComm-&gt;getSize();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Banner</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(kRank<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n--<sp/>puffrs<sp/>v<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>Puffrs_GIT_COMMIT_HASH<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(kNumberOfProcessors<sp/>&gt;<sp/>1)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;MPI<sp/>initialized<sp/>on<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>kNumberOfProcessors</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>processors.\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc<sp/>!=<sp/>2)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(kRank<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Usage:<sp/><sp/>puffrs<sp/>&lt;input.yml&gt;\n&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>factory<sp/>object<sp/>to<sp/>produce<sp/>main<sp/>puffrs<sp/>object</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classpuffrs_1_1PuffrsFactory" kindref="compound">puffrs::PuffrsFactory</ref><sp/>puffrs_factory;</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>puffrs<sp/>object</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespacepuffrs" kindref="compound">puffrs</ref><sp/>=<sp/>puffrs_factory.Create(kYamlFileName,<sp/>kComm);</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>filename<sp/>string<sp/>from<sp/>command<sp/>line</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>kYamlFileName(argv[1]);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>factory<sp/>object<sp/>to<sp/>produce<sp/>main<sp/>puffrs<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classpuffrs_1_1PuffrsFactory" kindref="compound">puffrs::PuffrsFactory</ref><sp/>puffrs_factory;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>puffrs<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespacepuffrs" kindref="compound">puffrs</ref><sp/>=<sp/>puffrs_factory.Create(kYamlFileName,<sp/>kComm);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Created<sp/>puffrs<sp/>factory.&quot;</highlight><highlight class="normal">&lt;&lt;endl;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/puffrs_main.cc"/>
   </compounddef>

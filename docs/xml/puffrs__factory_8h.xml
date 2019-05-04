@@ -10,12 +10,16 @@
     <includedby refid="puffrs__factory_8cc" local="yes">src/puffrs_factory.cc</includedby>
     <includedby refid="puffrs__main_8cc" local="yes">src/puffrs_main.cc</includedby>
     <incdepgraph>
-      <node id="80">
-        <label>puffrs_types.h</label>
-        <link refid="puffrs__types_8h_source"/>
-        <childnode refid="81" relation="include">
-        </childnode>
+      <node id="78">
+        <label>puffrs_discretization.h</label>
+        <link refid="puffrs__discretization_8h_source"/>
         <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
         </childnode>
       </node>
       <node id="74">
@@ -35,26 +39,12 @@
         <childnode refid="80" relation="include">
         </childnode>
       </node>
-      <node id="76">
-        <label>puffrs.h</label>
-        <link refid="puffrs_8h_source"/>
-        <childnode refid="77" relation="include">
+      <node id="80">
+        <label>puffrs_types.h</label>
+        <link refid="puffrs__types_8h_source"/>
+        <childnode refid="81" relation="include">
         </childnode>
-        <childnode refid="74" relation="include">
-        </childnode>
-        <childnode refid="78" relation="include">
-        </childnode>
-      </node>
-      <node id="78">
-        <label>puffrs_discretization.h</label>
-        <link refid="puffrs__discretization_8h_source"/>
         <childnode refid="79" relation="include">
-        </childnode>
-        <childnode refid="77" relation="include">
-        </childnode>
-        <childnode refid="74" relation="include">
-        </childnode>
-        <childnode refid="80" relation="include">
         </childnode>
       </node>
       <node id="79">
@@ -68,6 +58,16 @@
       </node>
       <node id="77">
         <label>Teuchos_Comm.hpp</label>
+      </node>
+      <node id="76">
+        <label>puffrs.h</label>
+        <link refid="puffrs_8h_source"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <innerclass refid="classpuffrs_1_1PuffrsFactory" prot="public">puffrs::PuffrsFactory</innerclass>
