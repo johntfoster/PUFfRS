@@ -175,8 +175,8 @@ epub_exclude_files = ['search.html']
 
 # Breathe options
 sys.path.append( "../../../ext/breathe/" )
-subprocess.call('cd ../../..; doxygen', shell=True)
+subprocess.call('cd ../../..; doxygen Doxyfile', shell=True)
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.coverage','breathe' ]
 breathe_projects = { "PUFfRs": "../../xml" }
 breathe_default_project = "PUFfRs"
-html_extra_path = ['/home/nelson/Downloads/App/PUFfRs/docs/html']
+html_extra_path = ['../../../docs/html']
