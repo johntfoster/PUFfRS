@@ -18,3 +18,7 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+.. doxygenclass::PUFfRs 
+   :project: PUFfRs
+   :members:
