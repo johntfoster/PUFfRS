@@ -31,10 +31,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>With a little bit of a elaboration, should you feel it necessary. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/puffrs_parser.h" line="26" column="1" bodyfile="src/puffrs_parser.cc" bodystart="29" bodyend="68"/>
+        <location file="src/puffrs_parser.h" line="26" column="1" bodyfile="src/puffrs_parser.cc" bodystart="35" bodyend="68"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-func">

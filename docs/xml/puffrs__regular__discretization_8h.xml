@@ -8,46 +8,46 @@
     <includedby refid="puffrs__discretization__factory_8cc" local="yes">src/puffrs_discretization_factory.cc</includedby>
     <includedby refid="puffrs__regular__discretization_8cc" local="yes">src/puffrs_regular_discretization.cc</includedby>
     <incdepgraph>
-      <node id="126">
+      <node id="124">
         <label>puffrs_discretization.h</label>
         <link refid="puffrs__discretization_8h_source"/>
-        <childnode refid="127" relation="include">
-        </childnode>
-        <childnode refid="124" relation="include">
-        </childnode>
         <childnode refid="125" relation="include">
         </childnode>
-        <childnode refid="128" relation="include">
+        <childnode refid="122" relation="include">
         </childnode>
-      </node>
-      <node id="125">
-        <label>Teuchos_ParameterList.hpp</label>
-      </node>
-      <node id="123">
-        <label>src/puffrs_regular_discretization.h</label>
-        <link refid="puffrs__regular__discretization_8h"/>
-        <childnode refid="124" relation="include">
-        </childnode>
-        <childnode refid="125" relation="include">
+        <childnode refid="123" relation="include">
         </childnode>
         <childnode refid="126" relation="include">
         </childnode>
       </node>
-      <node id="128">
+      <node id="123">
+        <label>Teuchos_ParameterList.hpp</label>
+      </node>
+      <node id="121">
+        <label>src/puffrs_regular_discretization.h</label>
+        <link refid="puffrs__regular__discretization_8h"/>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+      </node>
+      <node id="126">
         <label>puffrs_types.h</label>
         <link refid="puffrs__types_8h_source"/>
-        <childnode refid="129" relation="include">
-        </childnode>
         <childnode refid="127" relation="include">
         </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
       </node>
-      <node id="127">
+      <node id="125">
         <label>vector</label>
       </node>
-      <node id="129">
+      <node id="127">
         <label>array</label>
       </node>
-      <node id="124">
+      <node id="122">
         <label>Teuchos_Comm.hpp</label>
       </node>
     </incdepgraph>

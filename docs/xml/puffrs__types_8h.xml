@@ -8,60 +8,60 @@
     <includedby refid="puffrs__discretization__factory_8h" local="yes">src/puffrs_discretization_factory.h</includedby>
     <includedby refid="puffrs__factory_8h" local="yes">src/puffrs_factory.h</includedby>
     <incdepgraph>
-      <node id="131">
+      <node id="129">
         <label>src/puffrs_types.h</label>
         <link refid="puffrs__types_8h"/>
-        <childnode refid="132" relation="include">
+        <childnode refid="130" relation="include">
         </childnode>
-        <childnode refid="133" relation="include">
+        <childnode refid="131" relation="include">
         </childnode>
       </node>
-      <node id="133">
+      <node id="131">
         <label>vector</label>
       </node>
-      <node id="132">
+      <node id="130">
         <label>array</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="135">
+      <node id="133">
         <label>src/puffrs_discretization.h</label>
         <link refid="puffrs__discretization_8h_source"/>
+        <childnode refid="134" relation="include">
+        </childnode>
         <childnode refid="136" relation="include">
-        </childnode>
-        <childnode refid="138" relation="include">
-        </childnode>
-        <childnode refid="139" relation="include">
         </childnode>
         <childnode refid="137" relation="include">
         </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
       </node>
-      <node id="137">
+      <node id="135">
         <label>src/puffrs_factory.h</label>
         <link refid="puffrs__factory_8h_source"/>
       </node>
-      <node id="138">
+      <node id="136">
         <label>src/puffrs_discretization_factory.h</label>
         <link refid="puffrs__discretization__factory_8h_source"/>
       </node>
-      <node id="139">
+      <node id="137">
         <label>src/puffrs_regular_discretization.h</label>
         <link refid="puffrs__regular__discretization_8h_source"/>
       </node>
-      <node id="134">
+      <node id="132">
         <label>src/puffrs_types.h</label>
         <link refid="puffrs__types_8h"/>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
         <childnode refid="135" relation="include">
         </childnode>
-        <childnode refid="138" relation="include">
-        </childnode>
-        <childnode refid="137" relation="include">
-        </childnode>
       </node>
-      <node id="136">
+      <node id="134">
         <label>src/puffrs.h</label>
         <link refid="puffrs_8h_source"/>
-        <childnode refid="137" relation="include">
+        <childnode refid="135" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
