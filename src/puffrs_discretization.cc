@@ -16,6 +16,13 @@
 
 #include "puffrs_discretization.h"
 
+/** Creates a Puffrs discretizer.
+ *
+ * @param kComm                     pointer to list of RCPs(reference counting pointers)
+ *                                  for a Teuchos distributted memeory communication
+ *                                  interface
+ * @param kDiscretizationParameters pointer to list of parameters used for discretization
+ */
 puffrs::Discretization::Discretization(
     const Teuchos::RCP<const Teuchos::Comm<puffrs::types::PuffrsComm>> &kComm,
     const Teuchos::RCP<Teuchos::ParameterList> &kDiscretizationParameters) {}
