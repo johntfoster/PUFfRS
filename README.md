@@ -7,11 +7,11 @@ This is the **P**artition-of-**U**nity **F**ramework **f**or **R**eservoir **S**
 
 ## Requirements for PUFfRS
 
-C++ - version xx.xx
-OpenMPI - version xx.xx
+C++ Complier - version 5.4.0+
+OpenMPI - version 1.10.2+
 Trilinos - most recent version
-Boost - version xx.xx
-yaml-cpp - version xx.xx
+Boost - please check Trilinos documentation
+yaml-cpp - please check Trilinos documentation
 
 
 ## Build instructions
@@ -30,13 +30,13 @@ sudo make install
 
 **Build Using Pre-existing Packages**
 This will install only PUFfRS:
-NEED COMMANDS FROM AKHIL
+
 ```
 cd puffrs_dir
 mkdir build
 cd build
 
-cmake -D
+cmake -DTrilinos_DIR=/path/to/trilinos/installation/ ..
 make
 make install
 ```
