@@ -20,8 +20,9 @@ matrix:
   - if: branch = master
     os: linux
     before_install: 
-      - sudo apt-get -qq update
       - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+      - sudo apt-get -qq update
+      - sudo apt-get install gcc-snapshot
       - sudo apt-get install -y g++-5
       - sudo apt-get install -y lcov
       - sudo apt-get install -y libblas-dev
