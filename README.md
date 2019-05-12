@@ -9,9 +9,12 @@ This is the **P**artition-of-**U**nity **F**ramework **f**or **R**eservoir **S**
 
 C++ Complier - version 5.4.0+  
 OpenMPI - version 1.10.2+  
-Trilinos - most recent version  
-Boost - please check Trilinos documentation  
-yaml-cpp - please check Trilinos documentation  
+  
+Trilinos:  
+	Please apt install the following packages:  
+	```sudo apt install libblas-dev libyaml-cpp-dev liblapack-dev```  
+	Boost - please check Trilinos documentation  
+	yaml-cpp - please check Trilinos documentation  
 
 
 ## Build instructions
@@ -29,8 +32,7 @@ sudo make install
 ```
 
 **Build Using Pre-existing Packages**  
-This will install only PUFfRS:
-
+This will install only PUFfRS using an existing Trilinos installation:
 ```
 cd puffrs_dir
 mkdir build
