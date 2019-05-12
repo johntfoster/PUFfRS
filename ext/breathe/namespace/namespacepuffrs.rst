@@ -1,0 +1,4 @@
+Namespace puffrs
+================
+
+.. doxygennamespace:: puffrs
