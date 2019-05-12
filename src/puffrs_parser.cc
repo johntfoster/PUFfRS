@@ -31,7 +31,12 @@
 
 #include "puffrs_parser.h"
 
-// Input file parser
+
+/** Input file parser
+ *
+ * @param kInputFile input file
+ * @return puffrs_parameters parsed input file
+ */
 Teuchos::RCP<Teuchos::ParameterList> puffrs::PuffrsParser::Parse(
 		/*!
 		* ... File Parser ...

@@ -16,6 +16,13 @@
 #include "puffrs_discretization_factory.h"
 #include "puffrs_regular_discretization.h"
 
+/** Creates a Puffrs discritization factory.
+ *
+ * @param kComm                     pointer to list of RCPs(reference counting pointers)
+ *                                  for a Teuchos distributted memeory communication
+ *                                  interface
+ * @param kDiscretizationParameters pointer to list of parameters used for discritization
+ */
 puffrs::DiscretizationFactory::DiscretizationFactory(
     const Teuchos::RCP<Teuchos::ParameterList>& kDiscretizationParameters)
     : kDiscretizationParameters_(kDiscretizationParameters) {
@@ -28,6 +35,13 @@ puffrs::DiscretizationFactory::DiscretizationFactory(
     }
 }
 
+/** Returns a discretization based on type using Teuchos.
+ *
+ * @param kComm                     pointer to list of RCPs(reference counting pointers)
+ *                                  for a Teuchos distributted memeory communication
+ *                                  interface
+ * @return discritization           discretized input from Teuchos
+ */
 Teuchos::RCP<puffrs::Discretization> puffrs::DiscretizationFactory::Create(
     const Teuchos::RCP<const Teuchos::Comm<puffrs::types::PuffrsComm> >&
         kComm) {
