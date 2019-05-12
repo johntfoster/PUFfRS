@@ -32,6 +32,13 @@ CMakeFiles/
 CMakeCache.txt
 *.cmake
 
+
+#Sphinx
+docs/sphinx/build/
+docs/html/
+docs/xml/
+docs/latex/
+
 # Build
 build
 
