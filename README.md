@@ -7,16 +7,16 @@ This is the **P**artition-of-**U**nity **F**ramework **f**or **R**eservoir **S**
 
 ## Requirements for PUFfRS
 
-C++ Complier - version 5.4.0+
-OpenMPI - version 1.10.2+
-Trilinos - most recent version
-Boost - please check Trilinos documentation
-yaml-cpp - please check Trilinos documentation
+C++ Complier - version 5.4.0+  
+OpenMPI - version 1.10.2+  
+Trilinos - most recent version  
+Boost - please check Trilinos documentation  
+yaml-cpp - please check Trilinos documentation  
 
 
 ## Build instructions
 
-**Build Only Required Packages**
+**Build Only Required Packages**  
 This will install essential parts of Trilinos, Boost, yaml-cpp, and PUFfRS:
 ```
 cd puffrs_dir
@@ -28,7 +28,7 @@ sudo make
 sudo make install
 ```
 
-**Build Using Pre-existing Packages**
+**Build Using Pre-existing Packages**  
 This will install only PUFfRS:
 
 ```
