@@ -1,3 +1,11 @@
+/**
+ *     \file nutshell.h
+ *         An overly extended example of how to use breathe
+ *         */
+
+/*!
+ *     With a little bit of a elaboration, should you feel it necessary.
+ *     */
 // Copyright 2017 John T. Foster
 
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -30,6 +38,9 @@
  * @return puffrs_parameters parsed input file
  */
 Teuchos::RCP<Teuchos::ParameterList> puffrs::PuffrsParser::Parse(
+		/*!
+		* ... File Parser ...
+		*/
     const std::string kInputFile) {
     // Set application parameters to default values
     auto puffrs_parameters = Teuchos::rcp(new Teuchos::ParameterList());

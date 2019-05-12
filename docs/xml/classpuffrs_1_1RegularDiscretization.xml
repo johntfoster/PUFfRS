@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classpuffrs_1_1RegularDiscretization" kind="class" language="C++" prot="public">
+    <compoundname>puffrs::RegularDiscretization</compoundname>
+    <basecompoundref refid="classpuffrs_1_1Discretization" prot="public" virt="non-virtual">puffrs::Discretization</basecompoundref>
+    <includes refid="puffrs__regular__discretization_8h" local="no">puffrs_regular_discretization.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classpuffrs_1_1RegularDiscretization_1a5306dd2eda5b9c75850e889e6b0a2b54" prot="protected" static="no" mutable="no">
+        <type>const Teuchos::RCP&lt; const Teuchos::Comm&lt; int &gt; &gt; &amp;</type>
+        <definition>const Teuchos::RCP&lt;const Teuchos::Comm&lt;int&gt; &gt;&amp; puffrs::RegularDiscretization::kComm_</definition>
+        <argsstring></argsstring>
+        <name>kComm_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_regular_discretization.h" line="43" column="1" bodyfile="src/puffrs_regular_discretization.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpuffrs_1_1RegularDiscretization_1adb66672889168f2829fd7d8b1cc5faee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>puffrs::RegularDiscretization::RegularDiscretization</definition>
+        <argsstring>(const Teuchos::RCP&lt; const Teuchos::Comm&lt; int &gt; &gt; &amp;kComm, const Teuchos::RCP&lt; Teuchos::ParameterList &gt; &amp;kDiscretizationParameters)</argsstring>
+        <name>RegularDiscretization</name>
+        <param>
+          <type>const Teuchos::RCP&lt; const Teuchos::Comm&lt; int &gt; &gt; &amp;</type>
+          <declname>kComm</declname>
+        </param>
+        <param>
+          <type>const Teuchos::RCP&lt; Teuchos::ParameterList &gt; &amp;</type>
+          <declname>kDiscretizationParameters</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_regular_discretization.h" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classpuffrs_1_1RegularDiscretization_1a246a4ab0d1388baf3a5f5d931745ac7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>puffrs::RegularDiscretization::~RegularDiscretization</definition>
+        <argsstring>()</argsstring>
+        <name>~RegularDiscretization</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_regular_discretization.h" line="32" column="1" bodyfile="src/puffrs_regular_discretization.h" bodystart="32" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classpuffrs_1_1RegularDiscretization_1aa9c47d9034810efb28b23ce9e3c35e12" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>puffrs::RegularDiscretization::RegularDiscretization</definition>
+        <argsstring>(const RegularDiscretization &amp;)</argsstring>
+        <name>RegularDiscretization</name>
+        <param>
+          <type>const <ref refid="classpuffrs_1_1RegularDiscretization" kindref="compound">RegularDiscretization</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_regular_discretization.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classpuffrs_1_1RegularDiscretization_1a9af65493cb51df0a8e9b82ca46b9a897" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classpuffrs_1_1RegularDiscretization" kindref="compound">RegularDiscretization</ref> &amp;</type>
+        <definition>RegularDiscretization&amp; puffrs::RegularDiscretization::operator=</definition>
+        <argsstring>(const Discretization &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classpuffrs_1_1Discretization" kindref="compound">Discretization</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_regular_discretization.h" line="39" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Discretiation class for regular discretization. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="11">
+        <label>puffrs::RegularDiscretization</label>
+        <link refid="classpuffrs_1_1RegularDiscretization"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>puffrs::Discretization</label>
+        <link refid="classpuffrs_1_1Discretization"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="13">
+        <label>puffrs::RegularDiscretization</label>
+        <link refid="classpuffrs_1_1RegularDiscretization"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>puffrs::Discretization</label>
+        <link refid="classpuffrs_1_1Discretization"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/puffrs_regular_discretization.h" line="25" column="1" bodyfile="src/puffrs_regular_discretization.h" bodystart="25" bodyend="44"/>
+    <listofallmembers>
+      <member refid="classpuffrs_1_1Discretization_1a4da185868d21559de4d7a595d9a90bcf" prot="public" virt="non-virtual"><scope>puffrs::RegularDiscretization</scope><name>Discretization</name></member>
+      <member refid="classpuffrs_1_1Discretization_1ac349695d441491e509fb7cb772ae9891" prot="protected" virt="non-virtual"><scope>puffrs::RegularDiscretization</scope><name>initialize</name></member>
+      <member refid="classpuffrs_1_1RegularDiscretization_1a5306dd2eda5b9c75850e889e6b0a2b54" prot="protected" virt="non-virtual"><scope>puffrs::RegularDiscretization</scope><name>kComm_</name></member>
+      <member refid="classpuffrs_1_1RegularDiscretization_1a9af65493cb51df0a8e9b82ca46b9a897" prot="private" virt="non-virtual"><scope>puffrs::RegularDiscretization</scope><name>operator=</name></member>
+      <member refid="classpuffrs_1_1RegularDiscretization_1adb66672889168f2829fd7d8b1cc5faee" prot="public" virt="non-virtual"><scope>puffrs::RegularDiscretization</scope><name>RegularDiscretization</name></member>
+      <member refid="classpuffrs_1_1RegularDiscretization_1aa9c47d9034810efb28b23ce9e3c35e12" prot="private" virt="non-virtual"><scope>puffrs::RegularDiscretization</scope><name>RegularDiscretization</name></member>
+      <member refid="classpuffrs_1_1Discretization_1ad865495300b727357696bdfb3ad9af0f" prot="public" virt="virtual"><scope>puffrs::RegularDiscretization</scope><name>~Discretization</name></member>
+      <member refid="classpuffrs_1_1RegularDiscretization_1a246a4ab0d1388baf3a5f5d931745ac7b" prot="public" virt="non-virtual"><scope>puffrs::RegularDiscretization</scope><name>~RegularDiscretization</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

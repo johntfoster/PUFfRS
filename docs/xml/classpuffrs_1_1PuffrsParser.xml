@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classpuffrs_1_1PuffrsParser" kind="class" language="C++" prot="public">
+    <compoundname>puffrs::PuffrsParser</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpuffrs_1_1PuffrsParser_1a9da626765cb93b777204495b4b7a077a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>puffrs::PuffrsParser::PuffrsParser</definition>
+        <argsstring>()</argsstring>
+        <name>PuffrsParser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_parser.h" line="24" column="1" bodyfile="src/puffrs_parser.h" bodystart="24" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classpuffrs_1_1PuffrsParser_1aa41312817bfa20dc93e80790f51a720b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Teuchos::RCP&lt; Teuchos::ParameterList &gt;</type>
+        <definition>Teuchos::RCP&lt; Teuchos::ParameterList &gt; puffrs::PuffrsParser::Parse</definition>
+        <argsstring>(const std::string kInputFile)</argsstring>
+        <name>Parse</name>
+        <param>
+          <type>const std::string</type>
+          <declname>kInputFile</declname>
+          <briefdescription><para>... File Parser ... </para></briefdescription>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>With a little bit of a elaboration, should you feel it necessary. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_parser.h" line="26" column="1" bodyfile="src/puffrs_parser.cc" bodystart="35" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classpuffrs_1_1PuffrsParser_1afcea28088372ba57ea9baab86b1a22c3" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void puffrs::PuffrsParser::SetPuffrsParameterDefaults</definition>
+        <argsstring>(Teuchos::Ptr&lt; Teuchos::ParameterList &gt; puffrs_parameters)</argsstring>
+        <name>SetPuffrsParameterDefaults</name>
+        <param>
+          <type>Teuchos::Ptr&lt; Teuchos::ParameterList &gt;</type>
+          <declname>puffrs_parameters</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_parser.h" line="31" column="1" bodyfile="src/puffrs_parser.cc" bodystart="70" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classpuffrs_1_1PuffrsParser_1a29322105db5a166f5a778f9c01146290" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>puffrs::PuffrsParser::PuffrsParser</definition>
+        <argsstring>(const PuffrsParser &amp;)</argsstring>
+        <name>PuffrsParser</name>
+        <param>
+          <type>const <ref refid="classpuffrs_1_1PuffrsParser" kindref="compound">PuffrsParser</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_parser.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classpuffrs_1_1PuffrsParser_1a7db2d31b496a8cc95e412f48f58f288a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classpuffrs_1_1PuffrsParser" kindref="compound">PuffrsParser</ref> &amp;</type>
+        <definition>PuffrsParser&amp; puffrs::PuffrsParser::operator=</definition>
+        <argsstring>(const PuffrsParser &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classpuffrs_1_1PuffrsParser" kindref="compound">PuffrsParser</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_parser.h" line="38" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/puffrs_parser.h" line="22" column="1" bodyfile="src/puffrs_parser.h" bodystart="22" bodyend="39"/>
+    <listofallmembers>
+      <member refid="classpuffrs_1_1PuffrsParser_1a7db2d31b496a8cc95e412f48f58f288a" prot="private" virt="non-virtual"><scope>puffrs::PuffrsParser</scope><name>operator=</name></member>
+      <member refid="classpuffrs_1_1PuffrsParser_1aa41312817bfa20dc93e80790f51a720b" prot="public" virt="non-virtual"><scope>puffrs::PuffrsParser</scope><name>Parse</name></member>
+      <member refid="classpuffrs_1_1PuffrsParser_1a9da626765cb93b777204495b4b7a077a" prot="public" virt="non-virtual"><scope>puffrs::PuffrsParser</scope><name>PuffrsParser</name></member>
+      <member refid="classpuffrs_1_1PuffrsParser_1a29322105db5a166f5a778f9c01146290" prot="private" virt="non-virtual"><scope>puffrs::PuffrsParser</scope><name>PuffrsParser</name></member>
+      <member refid="classpuffrs_1_1PuffrsParser_1afcea28088372ba57ea9baab86b1a22c3" prot="private" virt="non-virtual"><scope>puffrs::PuffrsParser</scope><name>SetPuffrsParameterDefaults</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

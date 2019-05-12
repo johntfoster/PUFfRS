@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classpuffrs_1_1Puffrs" kind="class" language="C++" prot="public">
+    <compoundname>puffrs::Puffrs</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpuffrs_1_1Puffrs_1a7461fc917e9ae7e78a2b5c8c851d6999" prot="private" static="no" mutable="no">
+        <type>Teuchos::RCP&lt; Teuchos::ParameterList &gt;</type>
+        <definition>Teuchos::RCP&lt;Teuchos::ParameterList&gt; puffrs::Puffrs::parameters_</definition>
+        <argsstring></argsstring>
+        <name>parameters_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs.h" line="33" column="1" bodyfile="src/puffrs.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpuffrs_1_1Puffrs_1abcef5a8b8844d979db872e51b8f89abb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>puffrs::Puffrs::Puffrs</definition>
+        <argsstring>(const Teuchos::RCP&lt; const Teuchos::Comm&lt; int &gt; &gt; &amp;kComm, Teuchos::RCP&lt; Teuchos::ParameterList &gt; parameters, Teuchos::RCP&lt; puffrs::Discretization &gt; puffrs_discretization)</argsstring>
+        <name>Puffrs</name>
+        <param>
+          <type>const Teuchos::RCP&lt; const Teuchos::Comm&lt; int &gt; &gt; &amp;</type>
+          <declname>kComm</declname>
+        </param>
+        <param>
+          <type>Teuchos::RCP&lt; Teuchos::ParameterList &gt;</type>
+          <declname>parameters</declname>
+        </param>
+        <param>
+          <type>Teuchos::RCP&lt; <ref refid="classpuffrs_1_1Discretization" kindref="compound">puffrs::Discretization</ref> &gt;</type>
+          <declname>puffrs_discretization</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs.h" line="26" column="1" bodyfile="src/puffrs.cc" bodystart="18" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classpuffrs_1_1Puffrs_1af2fc58b21503026f090371ebd4d7d8c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual puffrs::Puffrs::~Puffrs</definition>
+        <argsstring>()</argsstring>
+        <name>~Puffrs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs.h" line="30" column="1" bodyfile="src/puffrs.h" bodystart="30" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/puffrs.h" line="24" column="1" bodyfile="src/puffrs.h" bodystart="24" bodyend="34"/>
+    <listofallmembers>
+      <member refid="classpuffrs_1_1Puffrs_1a7461fc917e9ae7e78a2b5c8c851d6999" prot="private" virt="non-virtual"><scope>puffrs::Puffrs</scope><name>parameters_</name></member>
+      <member refid="classpuffrs_1_1Puffrs_1abcef5a8b8844d979db872e51b8f89abb" prot="public" virt="non-virtual"><scope>puffrs::Puffrs</scope><name>Puffrs</name></member>
+      <member refid="classpuffrs_1_1Puffrs_1af2fc58b21503026f090371ebd4d7d8c3" prot="public" virt="virtual"><scope>puffrs::Puffrs</scope><name>~Puffrs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

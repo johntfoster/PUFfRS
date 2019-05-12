@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classpuffrs_1_1DiscretizationFactory" kind="class" language="C++" prot="public">
+    <compoundname>puffrs::DiscretizationFactory</compoundname>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classpuffrs_1_1DiscretizationFactory_1a5375e76d7af9c10d52eb374ead8a922c" prot="protected" static="no" mutable="no">
+        <type>const Teuchos::RCP&lt; Teuchos::ParameterList &gt;</type>
+        <definition>const Teuchos::RCP&lt;Teuchos::ParameterList&gt; puffrs::DiscretizationFactory::kDiscretizationParameters_</definition>
+        <argsstring></argsstring>
+        <name>kDiscretizationParameters_</name>
+        <briefdescription>
+<para>Parameter list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_discretization_factory.h" line="46" column="1" bodyfile="src/puffrs_discretization_factory.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpuffrs_1_1DiscretizationFactory_1af6d6e4dfb783d8a85208680f84e50cda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>puffrs::DiscretizationFactory::DiscretizationFactory</definition>
+        <argsstring>(const Teuchos::RCP&lt; Teuchos::ParameterList &gt; &amp;kDiscretizationParameters)</argsstring>
+        <name>DiscretizationFactory</name>
+        <param>
+          <type>const Teuchos::RCP&lt; Teuchos::ParameterList &gt; &amp;</type>
+          <declname>kDiscretizationParameters</declname>
+        </param>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_discretization_factory.h" line="29" column="1" bodyfile="src/puffrs_discretization_factory.cc" bodystart="19" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classpuffrs_1_1DiscretizationFactory_1a388d77d1ec8064e31cea45d211e208b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual puffrs::DiscretizationFactory::~DiscretizationFactory</definition>
+        <argsstring>()</argsstring>
+        <name>~DiscretizationFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_discretization_factory.h" line="32" column="1" bodyfile="src/puffrs_discretization_factory.h" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classpuffrs_1_1DiscretizationFactory_1a179e7c336204e55c07de5510398b090a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>Teuchos::RCP&lt; <ref refid="classpuffrs_1_1Discretization" kindref="compound">Discretization</ref> &gt;</type>
+        <definition>Teuchos::RCP&lt; puffrs::Discretization &gt; puffrs::DiscretizationFactory::Create</definition>
+        <argsstring>(const Teuchos::RCP&lt; const Teuchos::Comm&lt; types::PuffrsComm &gt; &gt; &amp;kComm)</argsstring>
+        <name>Create</name>
+        <param>
+          <type>const Teuchos::RCP&lt; const Teuchos::Comm&lt; types::PuffrsComm &gt; &gt; &amp;</type>
+          <declname>kComm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_discretization_factory.h" line="34" column="1" bodyfile="src/puffrs_discretization_factory.cc" bodystart="31" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classpuffrs_1_1DiscretizationFactory_1a54bcca9f9d8fb1103b02f95f4d95313a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>puffrs::DiscretizationFactory::DiscretizationFactory</definition>
+        <argsstring>(const DiscretizationFactory &amp;)</argsstring>
+        <name>DiscretizationFactory</name>
+        <param>
+          <type>const <ref refid="classpuffrs_1_1DiscretizationFactory" kindref="compound">DiscretizationFactory</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Private to prohibit copying. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_discretization_factory.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classpuffrs_1_1DiscretizationFactory_1a85641b0ce8c164b6a226ec8148af6c19" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classpuffrs_1_1DiscretizationFactory" kindref="compound">DiscretizationFactory</ref> &amp;</type>
+        <definition>DiscretizationFactory&amp; puffrs::DiscretizationFactory::operator=</definition>
+        <argsstring>(const DiscretizationFactory &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classpuffrs_1_1DiscretizationFactory" kindref="compound">DiscretizationFactory</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Private to prohibit copying. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_discretization_factory.h" line="42" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/puffrs_discretization_factory.h" line="26" column="1" bodyfile="src/puffrs_discretization_factory.h" bodystart="26" bodyend="47"/>
+    <listofallmembers>
+      <member refid="classpuffrs_1_1DiscretizationFactory_1a179e7c336204e55c07de5510398b090a" prot="public" virt="virtual"><scope>puffrs::DiscretizationFactory</scope><name>Create</name></member>
+      <member refid="classpuffrs_1_1DiscretizationFactory_1af6d6e4dfb783d8a85208680f84e50cda" prot="public" virt="non-virtual"><scope>puffrs::DiscretizationFactory</scope><name>DiscretizationFactory</name></member>
+      <member refid="classpuffrs_1_1DiscretizationFactory_1a54bcca9f9d8fb1103b02f95f4d95313a" prot="private" virt="non-virtual"><scope>puffrs::DiscretizationFactory</scope><name>DiscretizationFactory</name></member>
+      <member refid="classpuffrs_1_1DiscretizationFactory_1a5375e76d7af9c10d52eb374ead8a922c" prot="protected" virt="non-virtual"><scope>puffrs::DiscretizationFactory</scope><name>kDiscretizationParameters_</name></member>
+      <member refid="classpuffrs_1_1DiscretizationFactory_1a85641b0ce8c164b6a226ec8148af6c19" prot="private" virt="non-virtual"><scope>puffrs::DiscretizationFactory</scope><name>operator=</name></member>
+      <member refid="classpuffrs_1_1DiscretizationFactory_1a388d77d1ec8064e31cea45d211e208b0" prot="public" virt="virtual"><scope>puffrs::DiscretizationFactory</scope><name>~DiscretizationFactory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

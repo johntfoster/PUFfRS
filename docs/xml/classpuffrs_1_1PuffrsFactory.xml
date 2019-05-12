@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classpuffrs_1_1PuffrsFactory" kind="class" language="C++" prot="public">
+    <compoundname>puffrs::PuffrsFactory</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpuffrs_1_1PuffrsFactory_1aafc0e7336244608cf484fba49b9d0b0d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>puffrs::PuffrsFactory::PuffrsFactory</definition>
+        <argsstring>()</argsstring>
+        <name>PuffrsFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_factory.h" line="28" column="1" bodyfile="src/puffrs_factory.h" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classpuffrs_1_1PuffrsFactory_1a3ba650436e01b505bf7903ed5e263a2a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual puffrs::PuffrsFactory::~PuffrsFactory</definition>
+        <argsstring>()</argsstring>
+        <name>~PuffrsFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_factory.h" line="30" column="1" bodyfile="src/puffrs_factory.h" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classpuffrs_1_1PuffrsFactory_1a1b0f9bebc29e95a6e02a0a10d33d378c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>Teuchos::RCP&lt; <ref refid="classpuffrs_1_1Puffrs" kindref="compound">puffrs::Puffrs</ref> &gt;</type>
+        <definition>virtual Teuchos::RCP&lt;puffrs::Puffrs&gt; puffrs::PuffrsFactory::Create</definition>
+        <argsstring>(const std::string kInputFile, const Teuchos::RCP&lt; const Teuchos::Comm&lt; types::PuffrsComm &gt; &gt; &amp;kComm, Teuchos::RCP&lt; puffrs::Discretization &gt; puffrs_discretization)</argsstring>
+        <name>Create</name>
+        <param>
+          <type>const std::string</type>
+          <declname>kInputFile</declname>
+        </param>
+        <param>
+          <type>const Teuchos::RCP&lt; const Teuchos::Comm&lt; types::PuffrsComm &gt; &gt; &amp;</type>
+          <declname>kComm</declname>
+        </param>
+        <param>
+          <type>Teuchos::RCP&lt; <ref refid="classpuffrs_1_1Discretization" kindref="compound">puffrs::Discretization</ref> &gt;</type>
+          <declname>puffrs_discretization</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_factory.h" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classpuffrs_1_1PuffrsFactory_1aaa29b92655e69498acaac735b673b409" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>Teuchos::RCP&lt; <ref refid="classpuffrs_1_1Puffrs" kindref="compound">puffrs::Puffrs</ref> &gt;</type>
+        <definition>virtual Teuchos::RCP&lt;puffrs::Puffrs&gt; puffrs::PuffrsFactory::Create</definition>
+        <argsstring>(const std::string kInputFile, const Teuchos::RCP&lt; const Teuchos::Comm&lt; types::PuffrsComm &gt; &gt; &amp;kComm)</argsstring>
+        <name>Create</name>
+        <param>
+          <type>const std::string</type>
+          <declname>kInputFile</declname>
+        </param>
+        <param>
+          <type>const Teuchos::RCP&lt; const Teuchos::Comm&lt; types::PuffrsComm &gt; &gt; &amp;</type>
+          <declname>kComm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_factory.h" line="37" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classpuffrs_1_1PuffrsFactory_1ad33d26fbd9c0312c7f446d2ac0524a46" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>puffrs::PuffrsFactory::PuffrsFactory</definition>
+        <argsstring>(const PuffrsFactory &amp;)</argsstring>
+        <name>PuffrsFactory</name>
+        <param>
+          <type>const <ref refid="classpuffrs_1_1PuffrsFactory" kindref="compound">PuffrsFactory</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_factory.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classpuffrs_1_1PuffrsFactory_1a19f3d1fa3725b73b0ab114da3626f1b7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classpuffrs_1_1PuffrsFactory" kindref="compound">PuffrsFactory</ref> &amp;</type>
+        <definition>PuffrsFactory&amp; puffrs::PuffrsFactory::operator=</definition>
+        <argsstring>(const PuffrsFactory &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classpuffrs_1_1PuffrsFactory" kindref="compound">PuffrsFactory</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/puffrs_factory.h" line="46" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/puffrs_factory.h" line="26" column="1" bodyfile="src/puffrs_factory.h" bodystart="26" bodyend="47"/>
+    <listofallmembers>
+      <member refid="classpuffrs_1_1PuffrsFactory_1a1b0f9bebc29e95a6e02a0a10d33d378c" prot="public" virt="virtual"><scope>puffrs::PuffrsFactory</scope><name>Create</name></member>
+      <member refid="classpuffrs_1_1PuffrsFactory_1aaa29b92655e69498acaac735b673b409" prot="public" virt="virtual"><scope>puffrs::PuffrsFactory</scope><name>Create</name></member>
+      <member refid="classpuffrs_1_1PuffrsFactory_1a19f3d1fa3725b73b0ab114da3626f1b7" prot="private" virt="non-virtual"><scope>puffrs::PuffrsFactory</scope><name>operator=</name></member>
+      <member refid="classpuffrs_1_1PuffrsFactory_1aafc0e7336244608cf484fba49b9d0b0d" prot="public" virt="non-virtual"><scope>puffrs::PuffrsFactory</scope><name>PuffrsFactory</name></member>
+      <member refid="classpuffrs_1_1PuffrsFactory_1ad33d26fbd9c0312c7f446d2ac0524a46" prot="private" virt="non-virtual"><scope>puffrs::PuffrsFactory</scope><name>PuffrsFactory</name></member>
+      <member refid="classpuffrs_1_1PuffrsFactory_1a3ba650436e01b505bf7903ed5e263a2a" prot="public" virt="virtual"><scope>puffrs::PuffrsFactory</scope><name>~PuffrsFactory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

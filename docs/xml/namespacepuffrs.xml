@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacepuffrs" kind="namespace" language="C++">
+    <compoundname>puffrs</compoundname>
+    <innerclass refid="classpuffrs_1_1Discretization" prot="public">puffrs::Discretization</innerclass>
+    <innerclass refid="classpuffrs_1_1DiscretizationFactory" prot="public">puffrs::DiscretizationFactory</innerclass>
+    <innerclass refid="classpuffrs_1_1Puffrs" prot="public">puffrs::Puffrs</innerclass>
+    <innerclass refid="classpuffrs_1_1PuffrsFactory" prot="public">puffrs::PuffrsFactory</innerclass>
+    <innerclass refid="classpuffrs_1_1PuffrsParser" prot="public">puffrs::PuffrsParser</innerclass>
+    <innerclass refid="classpuffrs_1_1RegularDiscretization" prot="public">puffrs::RegularDiscretization</innerclass>
+    <innernamespace refid="namespacepuffrs_1_1types">puffrs::types</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/puffrs.h" line="22" column="1"/>
+  </compounddef>
+</doxygen>
