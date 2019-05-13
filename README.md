@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/johntfoster/PUFfRS.svg?branch=master)](https://travis-ci.org/johntfoster/PUFfRS) [![Coverage Status](https://coveralls.io/repos/github/johntfoster/PUFfRS/badge.svg?branch=master)](https://coveralls.io/github/johntfoster/PUFfRS?branch=master)
 
-This is the **P**artition-of-**U**nity **F**ramework **f**or **R**eservoir **S**imulation project. It utilizes the Trilinos Project for increase computational efficiency and is currently in development.
+This is the **P**artition-of-**U**nity **F**ramework **f**or **R**eservoir **S**imulation project. It utilizes the Trilinos Project for increased computational efficiency and is currently in development.
 
 
 ## Requirements for PUFfRS
