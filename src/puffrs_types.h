@@ -17,13 +17,33 @@
 #include <array>
 #include <vector>
 
+/**
+ * puffrs namespace description. Detailed description.
+ */
 namespace puffrs {
+
+/**
+ * types namespace description. Detailed description.
+ */
 namespace types {
 
-// Standard puffrs types
+// Standard Puffrs types
+
+/**
+ * Defines a Puffrs integer.
+ */
 typedef int PuffrsInt;
+/**
+ * Defines a Puffrs unsigned integer.
+ */
 typedef std::size_t PuffrsUnsignedInt;
+/**
+ * Defines a Puffrs real double.
+ */
 typedef double PuffrsReal;
+/**
+ * Defines a Puffrs communicator.
+ */
 typedef PuffrsInt PuffrsComm;
 
 // Templated types from standard library;
@@ -39,7 +59,13 @@ using PuffrsIntArray = PuffrsArray<PuffrsInt, S>;
 template <PuffrsUnsignedInt S>
 using PuffrsRealArray = PuffrsArray<PuffrsReal, S>;
 
+/**
+ * Defines a Puffrs vector of integers.
+ */
 typedef PuffrsVector<PuffrsInt> PuffrsIntVector;
+/**
+ * Defines a Puffrs vector of real doubles.
+ */
 typedef PuffrsVector<PuffrsReal> PuffrsRealVector;
 }
 }

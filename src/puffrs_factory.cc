@@ -14,16 +14,6 @@
 #include "puffrs_factory.h"
 #include "puffrs_parser.h"
 
-/** Factory Method to create puffrs objects. This function is overloaded and
- * will take a set of three arguments here.
- *
- * @param kInputFile             the input file
- * @param kComm                  pointer to the Xpetra communicator
- * @param puffrs_discretization  Discretization
- * @return kComm                 puffrs kComm
- * @return kPuffrsParameters     parameters from input file as puffrs object
- * @return puffrs_discretization puffrs discretization
- */
 Teuchos::RCP<puffrs::Puffrs> puffrs::PuffrsFactory::Create(
     const std::string kInputFile,
     const Teuchos::RCP<const Teuchos::Comm<puffrs::types::PuffrsComm> >& kComm,
@@ -35,16 +25,6 @@ Teuchos::RCP<puffrs::Puffrs> puffrs::PuffrsFactory::Create(
         new puffrs::Puffrs(kComm, kPuffrsParameters, puffrs_discretization));
 }
 
-
-/** Factory Method to create puffrs objects. This function is overloaded and
- * will take a set of two arguments here.
- *
- * @param kInputFile            the input file
- * @param puffrs_discretization Discretization
- * @return kInputFile
- * @return kComm
- * @return null_discretization null discretization from Teuchos
- */
 Teuchos::RCP<puffrs::Puffrs> puffrs::PuffrsFactory::Create(
     const std::string kInputFile,
     const Teuchos::RCP<const Teuchos::Comm<puffrs::types::PuffrsComm> >&

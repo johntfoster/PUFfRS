@@ -21,19 +21,49 @@
 #include "puffrs_discretization.h"
 #include "puffrs_types.h"
 
+/**
+ * puffrs namespace description. Detailed description.
+ */
 namespace puffrs {
 
+/**
+ * PuffrsFactory class description. Detailed description.
+ */
 class PuffrsFactory {
+
    public:
+
     PuffrsFactory() {}
 
+    /**
+     * ~PuffrsFactory virtual member description.
+     */
     virtual ~PuffrsFactory(){};
 
+    /** Factory Method to create puffrs objects. This function is overloaded and
+     * will take a set of three arguments here.
+     *
+     * @param kInputFile             the input file
+     * @param kComm                  pointer to the Xpetra communicator
+     * @param puffrs_discretization  Discretization
+     * @return kComm                 puffrs kComm
+     * @return kPuffrsParameters     parameters from input file as puffrs object
+     * @return puffrs_discretization puffrs discretization
+     */
     virtual Teuchos::RCP<puffrs::Puffrs> Create(
         const std::string kInputFile,
         const Teuchos::RCP<const Teuchos::Comm<types::PuffrsComm> >& kComm,
         Teuchos::RCP<puffrs::Discretization> puffrs_discretization);
 
+    /** Factory Method to create puffrs objects. This function is overloaded and
+     * will take a set of two arguments here.
+     *
+     * @param kInputFile            the input file
+     * @param puffrs_discretization Discretization
+     * @return kInputFile
+     * @return kComm
+     * @return null_discretization null discretization from Teuchos
+     */
     virtual Teuchos::RCP<puffrs::Puffrs> Create(
         const std::string kInputFile,
         const Teuchos::RCP<const Teuchos::Comm<types::PuffrsComm> >& kComm);
