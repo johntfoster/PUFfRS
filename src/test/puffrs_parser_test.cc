@@ -20,7 +20,7 @@
 #include <string>
 
 #include "Teuchos_UnitTestHarness.hpp"
-#include "Tpetra_DefaultPlatform.hpp"
+#include "Xpetra_DefaultPlatform.hpp"
 
 #include "Teuchos_YamlParser_decl.hpp"
 
@@ -63,7 +63,7 @@ class TestSetup {
 
     // Get communicator from test runner
     Teuchos::RCP<const Teuchos::Comm<puffrs::types::PuffrsComm>> kComm_ =
-        Tpetra::DefaultPlatform::getDefaultPlatform().getComm();
+        Xpetra::DefaultPlatform::getDefaultPlatform().getComm();
 
     // Create temporary file
     std::string temp_file_name_;

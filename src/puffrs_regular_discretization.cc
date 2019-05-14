@@ -15,6 +15,12 @@
 #include "puffrs_regular_discretization.h"
 #include "puffrs_discretization.h"
 
+
+/** Input file parser
+ *
+ * @param kInputFile input file
+ * @return puffrs_parameters parsed input file
+ */
 puffrs::RegularDiscretization::RegularDiscretization(
     const Teuchos::RCP<const Teuchos::Comm<puffrs::types::PuffrsComm> >& kComm,
     const Teuchos::RCP<Teuchos::ParameterList>& kDiscretizationParameters)

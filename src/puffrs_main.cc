@@ -14,16 +14,23 @@
 #include <iostream>
 
 #include "Teuchos_GlobalMPISession.hpp"
-#include "Tpetra_DefaultPlatform.hpp"
+#include "Xpetra_DefaultPlatform.hpp"
 
 #include "puffrs_factory.h"
 #include "puffrs_version.h"
 
+
+/** Factory Method to create puffrs objects. This function is overloaded and
+ * will take a set of three arguments here.
+ *
+ * @param argc boolean for yaml input
+ * @param argv input file name
+ */
 int main(int argc, char* argv[]) {
     // Initialize MPI
     Teuchos::GlobalMPISession mpi_session(&argc, &argv, NULL);
 
-    auto kComm = Tpetra::DefaultPlatform::getDefaultPlatform().getComm();
+    auto kComm = Xpetra::DefaultPlatform::getDefaultPlatform().getComm();
 
     const auto kRank = kComm->getRank();
     const auto kNumberOfProcessors = kComm->getSize();
