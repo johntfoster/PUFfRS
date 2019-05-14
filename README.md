@@ -11,7 +11,8 @@ C++ Complier - version 5.4.0+
 OpenMPI - version 1.10.2+  
   
 Trilinos:  
-	Please apt install the following packages:  
+	Please install the following packages: libblas-dev, libyaml-cpp-dev, and liblapack-dev  
+	For Ubuntu/Debian:  
 	```sudo apt install libblas-dev libyaml-cpp-dev liblapack-dev```  
 	Boost - please check Trilinos documentation  
 	yaml-cpp - please check Trilinos documentation  
