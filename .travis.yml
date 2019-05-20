@@ -1,4 +1,4 @@
-dist: trusty
+dist: xenial
 sudo: required
 language: generic
 env:
@@ -21,8 +21,8 @@ matrix:
     os: linux
     before_install: 
       - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-      - sudo apt-get install -y software-properties-common
-      - sudo add-apt-repository -y ppa:george-edison55/cmake-3.x
+      # - sudo apt-get install -y software-properties-common
+      # - sudo add-apt-repository -y ppa:george-edison55/cmake-3.x
       - sudo apt-get -qq update
       - sudo apt-get install gcc-snapshot
       - sudo apt-get install -y g++-5
@@ -33,7 +33,7 @@ matrix:
       - sudo apt-get install -y libyaml-cpp0.5
       - sudo apt-get install -y libyaml-cpp-dev
       - sudo apt-get install -y cmake
-      - sudo apt-get --allow-unauthenticated upgrade
+      # - sudo apt-get --allow-unauthenticated upgrade
       - mkdir build
       - cd build
       - sudo cmake -DCMAKE_CXX_COMPILER=g++-5 -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME -DCOVERAGE:BOOL=ON -DBUILD_ALL_TPS=ON .. 
