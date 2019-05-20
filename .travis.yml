@@ -32,8 +32,8 @@ matrix:
       - sudo apt-get install -y libboost-dev
       - sudo apt-get install -y libyaml-cpp0.5v5
       - sudo apt-get install -y libyaml-cpp-dev
-      - sudo apt-get install -y cmake
-      - sudo apt-get install -y --only-upgrade cmake
+      - wget -O cmake.sh https://cmake.org/files/v3.10/cmake-3.10.0-rc1-Linux-x86_64.sh
+      - sudo sh cmake.sh --skip-license --exclude-subdir --prefix=/usr/local
       - mkdir build
       - cd build
       - sudo cmake -DCMAKE_CXX_COMPILER=g++-5 -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME -DCOVERAGE:BOOL=ON -DBUILD_ALL_TPS=ON .. 
