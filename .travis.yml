@@ -30,7 +30,7 @@ matrix:
       - sudo apt-get install -y libblas-dev
       - sudo apt-get install -y liblapack-dev
       - sudo apt-get install -y libboost-dev
-      - sudo apt-get install -y libyaml-cpp0.5v5
+      - sudo apt-get install -y libyaml-cpp0.5
       - sudo apt-get install -y libyaml-cpp-dev
       - wget -O cmake.sh https://cmake.org/files/v3.10/cmake-3.10.0-rc1-Linux-x86_64.sh
       - sudo sh cmake.sh --skip-license --exclude-subdir --prefix=/usr/local
