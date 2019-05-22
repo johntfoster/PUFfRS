@@ -42,7 +42,7 @@ matrix:
     after_success: 
       - gem install coveralls-lcov
       - make coverage
-      - coveralls-lcov coverage.info.cleaned
+      - sudo coveralls-lcov coverage.info.cleaned
 
   - if: branch = coverity_scan
     os: linux
