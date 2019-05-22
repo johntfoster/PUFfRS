@@ -10,15 +10,13 @@ Welcome to PUFfRs's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   Build Instructions
+   Puffrs Main
+   Puffrs Discretization
+   Puffrs Factory
+
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
-
-.. doxygenclass:: puffrs::Discretization
-   :project: PUFfRs
-
-.. doxygenclass:: puffrs::PuffrsParser
-   :project: PUFfRs
