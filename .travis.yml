@@ -38,11 +38,11 @@ matrix:
       - cd build
       - sudo cmake -DCMAKE_CXX_COMPILER=g++-5 -DCMAKE_BUILD_TYPE:STRING=Debug -DBUILD_Trilinos:BOOL=ON -DCMAKE_INSTALL_PREFIX=$HOME -DCOVERAGE:BOOL=ON -DBUILD_ALL_TPS=ON .. 
       - sudo make -j4
-    script: ctest 
+    script: sudo ctest
     after_success: 
       - gem install coveralls-lcov
       - make coverage
-      - sudo coveralls-lcov coverage.info.cleaned
+      - coveralls-lcov coverage.info.cleaned
 
   - if: branch = coverity_scan
     os: linux
