@@ -17,12 +17,25 @@
 #include <Teuchos_ParameterList.hpp>
 #include <Teuchos_RCP.hpp>
 
+/**
+ * puffrs namespace description. Detailed description.
+ */
 namespace puffrs {
 
+/**
+ * PuffrsParser class description. Detailed description.
+ */
 class PuffrsParser {
+
    public:
+
     PuffrsParser() {}
 
+    /** Input file parser
+     *
+     * @param kInputFile input file
+     * @return puffrs_parameters parsed input file
+     */
     static Teuchos::RCP<Teuchos::ParameterList> Parse(
         const std::string kInputFile);
 

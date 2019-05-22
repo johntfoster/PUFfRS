@@ -19,12 +19,23 @@
 
 #include "puffrs_discretization.h"
 
+/**
+ * puffrs namespace description. Detailed description.
+ */
 namespace puffrs {
 
-//! Discretiation class for regular discretization
+/**
+ * Discretiation class for regular discretization.
+ */
 class RegularDiscretization : public puffrs::Discretization {
+
    public:
-    // Constructor
+
+    /** Input file parser
+     *
+     * @param kInputFile input file
+     * @return puffrs_parameters parsed input file
+     */
     RegularDiscretization(
         const Teuchos::RCP<const Teuchos::Comm<int> >& kComm,
         const Teuchos::RCP<Teuchos::ParameterList>& kDiscretizationParameters);

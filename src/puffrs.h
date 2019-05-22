@@ -19,14 +19,36 @@
 
 #include "puffrs_discretization.h"
 
+/**
+ * puffrs namespace description. Detailed description.
+ */
 namespace puffrs {
 
+/**
+ * Puffrs class description. Detailed description.
+ */
 class Puffrs {
+
    public:
+
+    /** Creates a Puffrs object and ensures that it has the necessary parameters
+     * and descritizer.
+     *
+     * @param kComm                 pointer to list of RCPs(reference counting pointers)
+     *                              for a Teuchos distributted memeory communication
+     *                              interface
+     * @param parameters            list of parameters of arbitrary type
+     *                              needed by Puffrs to run simulations
+     * @param puffrs_discretization list of RCP for a Teuchos distribution of a
+     *                              discretization algorithm for Puffrs
+     */
     Puffrs(const Teuchos::RCP<const Teuchos::Comm<int> >& kComm,
            Teuchos::RCP<Teuchos::ParameterList> parameters,
            Teuchos::RCP<puffrs::Discretization> puffrs_discretization);
 
+    /**
+     * ~Puffrs virtual member description.
+     */
     virtual ~Puffrs() {}
 
    private:
